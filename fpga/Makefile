@@ -3,7 +3,6 @@ NEXTPNR ?= yowasp-nextpnr-gowin
 PROGRAMMER ?= /usr/local/bin/openFPGALoader
 DEVICE ?= GW1N-LV1QN48C6/I5
 DEVICE_FAMILY ?= GW1N-1
-LED_PIN ?= 3
 CST ?= radio_module.cst
 BOARD ?= tangnano
 #
@@ -20,7 +19,7 @@ clean:
 .PHONY: all clean 4k
 
 %-synth.json: %.v
-	$(YOSYS) -D LEDS_NR=${LED_PIN} -p "read_verilog $^; synth_gowin -json $@" $^
+	$(YOSYS) -p "read_verilog $^; synth_gowin -json $@" $^
 
 %.json: %-synth.json ${CST}
 	$(NEXTPNR) --json $< --write $@ --device ${DEVICE} --cst ${CST}

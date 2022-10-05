@@ -4,7 +4,14 @@ module top (
     input [1:0] R1_Q,
     input [1:0] R0_I,
     input [1:0] R0_Q,
-    output reg DATA_OUT
+    output reg DATA_OUT,
+    
+    output SYNC,
+    output MISC,
+
+    output CLK_OUT1,
+    output CLK_OUT2,
+    output CLK_OUT3
 );
     // Set up a counter
     reg [25:0] ctr_q = 0;
