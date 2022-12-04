@@ -7,7 +7,7 @@
 //
 // Refer the the radio module schematic for details of pinouts.
 
-IO_LOC "DATA_CLK" 35;
+IO_LOC "SYS_CLK" 35; // Main clock 16.3767 MHz
 
 IO_LOC "R1_I[0]" 39;
 IO_LOC "R1_I[1]" 40;
@@ -19,14 +19,15 @@ IO_LOC "R0_I[1]" 44;
 IO_LOC "R0_Q[0]" 45;
 IO_LOC "R0_Q[1]" 46;
 
-IO_LOC "DATA_OUT" 17;
+IO_LOC "DATA_OUT" 17;  // Serialized data out
 
 IO_LOC "SYNC" 22;
 IO_LOC "MISC" 23;
 
-IO_LOC "CLK_OUT1" 38;
-IO_LOC "CLK_OUT2" 13;
-IO_LOC "CLK_OUT3" 24;
+IO_LOC "CLK_OUT1" 38;  // radio 1 clock
+IO_LOC "CLK_OUT2" 13;  // radio 2 clock
+IO_LOC "CLK_OUT3" 24;  // extclock to uC
+IO_LOC "CLK_OUT4" 15;
 
 
 IO_PORT "DATA_CLK" IO_TYPE=LVCMOS33;

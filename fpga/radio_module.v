@@ -1,9 +1,9 @@
-`include "ser_pll.v"
+//`include "ser_pll.v"
 
 
 
 module top (
-    input DATA_CLK,
+    input SYS_CLK,
     input [1:0] R1_I,
     input [1:0] R1_Q,
     input [1:0] R0_I,
@@ -13,9 +13,9 @@ module top (
     output SYNC,
     output MISC,
 
-    output CLK_OUT1,
-    output CLK_OUT2,
-    output CLK_OUT3
+    output CLK_OUT1,  // clock to radio 1
+    output CLK_OUT2,  // clock to radio 2
+    output CLK_OUT3   // clk to uC
 );
     wire rx_clk; // 8 MHz data clock from radios
     wire fast_clk; // serial clock
@@ -24,17 +24,18 @@ module top (
     
     // Set up a the output clock for 
     
-    assign CLK_OUT1 = DATA_CLK;   // Clock for Radio 0
-    assign CLK_OUT2 = DATA_CLK;   // Clock for Radio 1
+    assign CLK_OUT1 = SYS_CLK;   // Clock for Radio 0
+    assign CLK_OUT2 = SYS_CLK;   // Clock for Radio 1
     
     // Set up PLL for the serialized data
     // input is 16.368 MHz GPS clock. Output is
     // the serialized data clock.
-    ser_pll pll_x10(.clkout(fast_clk),
-                    .clkoutd(rx_clk), 
-                    .clkin(DATA_CLK));
+    // ser_pll pll_x10(.clkout(fast_clk),
+    //                 .clkoutd(rx_clk), 
+    //                 .clkin(SYS_CLK));
+    assign fast_clk = SYS_CLK;
     
-    reg [3:0] ptr = 0;
+    reg [2:0] ptr = 0;
 
     always @(posedge rx_clk)
     begin
