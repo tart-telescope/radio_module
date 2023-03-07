@@ -1,6 +1,13 @@
 #include <Arduino.h>
 
+#include <SIKTEC_SPI.h>
+
+// Brings in SoftSPI
+
+#include "<DigitalIO.h>
+
 // Board definitions
+
 
 // LEDs
 #define LED_LD_A 30
@@ -39,13 +46,30 @@
 #define A4 8
 
 
+// SPI mapping
+
+const uint8_t SOFT_SPI_MISO_PIN = DIN;
+const uint8_t SOFT_SPI_MOSI_PIN = DOUT;
+const uint8_t SOFT_SPI_SCK_PIN  = DCLK;
+const uint8_t SPI_MODE = 0;
+
+SoftSPI<SOFT_SPI_MISO_PIN, SOFT_SPI_MOSI_PIN, SOFT_SPI_SCK_PIN, SPI_MODE> spi;
+
+void setupRadio() {
+    spi.begin();
+    digitalWrite(CS_A_NEG, 1);
+    spi.send(0X55);
+}
 
 void setup() {
   // put your setup code here, to run once:
   pinMode(LED_LD_A, OUTPUT);
-  pinMode(LED_LD_B, OUTPUT);
   pinMode(LED_ANT_A, OUTPUT);
+  pinMode(IN_ANT_A, INPUT);
+
+  pinMode(LED_LD_B, OUTPUT);
   pinMode(LED_ANT_B, OUTPUT);
+  pinMode(IN_ANT_B, INPUT);
 }
 
 void loop() {
