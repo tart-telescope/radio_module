@@ -23,6 +23,7 @@
 #define IN_ANT_B 19
 
 
+// Enable component power
 #define EN_A 34
 #define EN_B 35
 #define EN_FPGA 36
@@ -30,12 +31,13 @@
 
 // Serial Connection to Radio A, B
 #define DOUT 48
-#define DIN 1
+#define DIN 1 
 #define DCLK 2
 #define CS_A_NEG 23
 #define CS_B_NEG 24
 
 // Button on Board
+
 
 #define SW_1 47
 
@@ -74,10 +76,10 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(LED_LD_A, HIGH);
-  digitalWrite(LED_LD_B, LOW);
-  delay(3000);
-  digitalWrite(LED_LD_A, LOW);
-  digitalWrite(LED_LD_B, HIGH);
-  delay(1000);
+
+  int ld_a = digitalRead(IN_LD_A);
+  int ld_b = digitalRead(IN_LD_B);
+
+  digitalWrite(LED_LD_A, ld_a);
+  digitalWrite(LED_LD_B, ld_b);
 }
