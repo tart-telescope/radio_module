@@ -19,9 +19,9 @@
 
 
 // Enable component power
-#define EN_A PIN_PF0 // 34
-#define EN_B PIN_PF1 // 35
-#define EN_FPGA PIN_PF2 // 36
+#define EN_A_NEG PIN_PF0 // 34
+#define EN_B_NEG PIN_PF1 // 35
+#define EN_FPGA_NEG PIN_PF2 // 36
 
 
 // Serial Connection to Radio A, B
@@ -72,17 +72,21 @@ void setup() {
   pinMode(LED_ANT_B, OUTPUT);
   pinMode(IN_ANT_B, INPUT);
 
-  pinMode(CS_A_NEG, 1);
-  pinMode(CS_B_NEG, 1);
+  pinMode(CS_A_NEG, PIN_DIR_OUTPUT);
+  pinMode(CS_B_NEG, PIN_DIR_OUTPUT);
 
-  pinMode(EN_A, OUTPUT);
-  pinMode(EN_B, OUTPUT);
+  pinMode(EN_A_NEG, OUTPUT);
+  pinMode(EN_B_NEG, OUTPUT);
+  pinMode(EN_FPGA_NEG, OUTPUT);
 
-  digitalWrite(EN_A, HIGH);
-  digitalWrite(EN_B, HIGH);
+  digitalWrite(EN_A_NEG, LOW);
+  digitalWrite(EN_B_NEG, LOW);
+  digitalWrite(EN_FPGA_NEG, LOW);
   
-  setupRadio(CS_A_NEG);
-  setupRadio(CS_B_NEG);
+  delay(1000);
+
+ // setupRadio(CS_A_NEG);
+ // setupRadio(CS_B_NEG);
 }
 
 void loop() {
@@ -90,7 +94,16 @@ void loop() {
 
   int ld_a = digitalRead(IN_LD_A);
   int ld_b = digitalRead(IN_LD_B);
+  int sw_1 = digitalRead(SW_1);
 
   digitalWrite(LED_LD_A, ld_a);
   digitalWrite(LED_LD_B, ld_b);
+
+  
+  digitalWrite(LED_ANT_B, HIGH);
+
+  delay(1000);
+  digitalWrite(LED_ANT_B, LOW);
+  delay(1000);
+
 }
