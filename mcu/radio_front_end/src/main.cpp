@@ -75,6 +75,12 @@ void setup() {
   pinMode(CS_A_NEG, 1);
   pinMode(CS_B_NEG, 1);
 
+  pinMode(EN_A, OUTPUT);
+  pinMode(EN_B, OUTPUT);
+
+  digitalWrite(EN_A, HIGH);
+  digitalWrite(EN_B, HIGH);
+  
   setupRadio(CS_A_NEG);
   setupRadio(CS_B_NEG);
 }

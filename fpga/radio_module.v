@@ -3,7 +3,7 @@
 
 
 module top (
-    input SYS_CLK,
+    input SYS_CLK, // 16.368 MHz global clock
     input [1:0] R1_I,
     input [1:0] R1_Q,
     input [1:0] R0_I,
@@ -26,6 +26,7 @@ module top (
     
     assign CLK_OUT1 = SYS_CLK;   // Clock for Radio 0
     assign CLK_OUT2 = SYS_CLK;   // Clock for Radio 1
+    assign CLK_OUT3 = SYS_CLK;   // Clock for CPU
     
     // Set up PLL for the serialized data
     // input is 16.368 MHz GPS clock. Output is
