@@ -25,6 +25,11 @@ module radio_module_tb;
         $dumpfile("./radio_module_tb.lx2");
         $dumpvars(-1, radio_module_tb);
         $dumpon();
+        
+        R0_I = 2'b00;
+        R0_Q = 2'b01;
+        R1_I = 2'b10;
+        R1_Q = 2'b11;
 
         #300 $finish();
         $dumpoff();
