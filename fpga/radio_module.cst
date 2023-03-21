@@ -27,7 +27,7 @@ IO_LOC "MISC" 23;
 IO_LOC "CLK_OUT1" 38;  // radio 1 clock
 IO_LOC "CLK_OUT2" 13;  // radio 2 clock
 IO_LOC "CLK_OUT3" 24;  // extclock to uC
-IO_LOC "CLK_OUT4" 15;
+IO_LOC "CLK_OUT4" 15;  // unused
 
 
 IO_PORT "DATA_CLK" IO_TYPE=LVCMOS33;

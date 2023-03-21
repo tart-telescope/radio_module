@@ -1,4 +1,4 @@
-//`include "ser_pll.v"
+`include "ser_pll.v"
 
 
 
@@ -38,15 +38,16 @@ module top (
     
     reg [2:0] ptr = 0;
 
-    always @(posedge rx_clk)
+    always @(posedge SYS_CLK)
     begin
+        // latch the tx data
         tx_data <= {R0_I, R0_Q, R1_I, R1_Q };
     end
 
     always @(posedge fast_clk)
     begin
         DATA_OUT <= tx_data[ptr];
-        ptr = ptr + 1;
+        ptr <= ptr + 1;
     end
 
 endmodule
