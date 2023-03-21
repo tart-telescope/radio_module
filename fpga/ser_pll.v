@@ -95,10 +95,10 @@ endmodule //Gowin_rPLL
 
 `define PLL_DEVICE "GW1N-1"
 `define PLL_FCLKIN "16"
-`define PLL_FBDIV_SEL 5
-`define PLL_IDIV_SEL  1
+`define PLL_FBDIV_SEL 1
+`define PLL_IDIV_SEL  0
 `define PLL_ODIV_SEL  16
-`define DYN_SDIV_SEL  6
+`define DYN_SDIV_SEL  4
 
 module ser_pll (output clkout, output clkoutd, input clkin);
 	wire VCC;
@@ -115,11 +115,11 @@ module ser_pll (output clkout, output clkoutd, input clkin);
     reg reset = 0;
     
 	Gowin_rPLL pll0(
-		.clkout(clkout),         // connect an oscilloscope here. main freq
+		.clkout(clkout),
 		.clkfb(GND),
 		.clkin(clkin),
-		.clkoutd_o(clkoutd),		 // freq / SDIV = freq / 124
-		.lock_o(lock),           // this LED lights up when the PLL lock is triggered
+		.clkoutd_o(clkoutd),
+		.lock_o(lock),
 		.fdiv(fdiv),
 		.idiv(idiv),
 		.reset(GND),

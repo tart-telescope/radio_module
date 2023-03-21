@@ -11,6 +11,7 @@
 # 
 # VCO = FCLKIN*(FBDIV_SEL+1)*ODIV_SEL/(IDIV_SEL+1) = 1024.0MHz not in range 400 - 900MHz
 f_clkin = 16
+f_radio = 8
 
 for fbdiv_sel in range(0,63):
     for idiv_sel in range(0,63):
@@ -31,7 +32,7 @@ for fbdiv_sel in range(0,63):
                 if f_clkoutd != 8:
                     continue
 
-                if f_clkout != 48:
+                if f_clkout != 4*f_radio:
                     continue
                 
                 print(f" fbdiv_sel = {fbdiv_sel}, idiv_sel = {idiv_sel}, sdiv={sdiv} odiv={ODIV} f_vco={f_vco}")

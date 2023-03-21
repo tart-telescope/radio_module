@@ -20,7 +20,7 @@ module radio_module (
     wire rx_clk; // 8 MHz data clock from radios
     wire fast_clk; // serial clock
     
-    reg[7:0] tx_data;
+    reg[7:0] tx_data = 0;
     
     // Set up a the output clock for 
     
@@ -36,12 +36,12 @@ module radio_module (
                     .clkin(SYS_CLK));
     //assign fast_clk = SYS_CLK;
     
-    reg [2:0] ptr = 0;
+    reg [1:0] ptr = 0;
 
     always @(posedge rx_clk)
     begin
         // latch the tx data
-        tx_data <= {R0_I, R0_Q, R1_I, R1_Q };
+        tx_data <= tx_data + 1; // {R0_I, R0_Q, R1_I, R1_Q };
     end
 
     always @(posedge fast_clk)
