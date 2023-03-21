@@ -5,10 +5,20 @@ DEVICE ?= GW1N-LV1QN48C6/I5
 DEVICE_FAMILY ?= GW1N-1
 CST ?= radio_module.cst
 BOARD ?= tangnano
+MAIN ?= radio_module_tb
+
 #
 # The tang nano 4k is
 # DEVICE = GW1NSR-LV4CQN48PC7/I6
 # LED = 8
+
+icarus:
+	iverilog -v -D "SIM=1" -o${MAIN}.vvp -m radio_module_tb.v radio_module_tb.v
+	vvp -v ${MAIN}.vvp -lxt2
+
+
+view:   icarus
+	gtkwave radio_module_tb.lx2 view.gtkw
 
 all:
 	make radio_module-prog

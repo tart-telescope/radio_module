@@ -1,8 +1,8 @@
-`include "ser_pll.v"
+//`include "ser_pll.v"
 
 
 
-module top (
+module radio_module (
     input SYS_CLK, // 16.368 MHz global clock
     input [1:0] R1_I,
     input [1:0] R1_Q,

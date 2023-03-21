@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.114 (w)1999-2023 BSI
+[*] Tue Mar 21 01:34:40 2023
+[*]
+[dumpfile] "/home/tim/tart-telescope/radio_module/fpga/radio_module_tb.lx2"
+[dumpfile_mtime] "Tue Mar 21 01:33:46 2023"
+[dumpfile_size] 443
+[savefile] "/home/tim/tart-telescope/radio_module/fpga/view.gtkw"
+[timestart] 0
+[size] 1388 772
+[pos] -1 -1
+*-6.589764 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] radio_module_tb.
+[sst_width] 269
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 214
+@28
+radio_module_tb.dut.CLK_OUT1[0]
+radio_module_tb.dut.SYS_CLK[0]
+radio_module_tb.dut.DATA_OUT[0]
+@29
+radio_module_tb.dut.R0_I[1:0]
+[pattern_trace] 1
+[pattern_trace] 0
