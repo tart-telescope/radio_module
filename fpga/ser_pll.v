@@ -77,13 +77,28 @@ endmodule //Gowin_rPLL
     f_clkout = f_clkin * FBDIV / IDIV
     f_vco  = f_clkout * ODIV
     f_clkoutd = f_clkout / SDIV
+    
+    Desired behaviour clkin = 16
+     clkoutd = 8
+     clkout = clkin * 4 
+     
+    FBDIV / IDIV = 4
+    FBDIV / (IDIV * SDIV) = 0.5
+    
+    VCO = FCLKIN*(FBDIV_SEL+1)*ODIV_SEL/(IDIV_SEL+1) = 1024.0MHz not in range 400 - 900MHz
+    
+    for fbdiv_sel in [0..63]:
+        for idiv_sel in [0..63]:
+        
+        
 **/
 
 `define PLL_DEVICE "GW1N-1"
 `define PLL_FCLKIN "16"
-`define PLL_FBDIV_SEL 8
-`define PLL_IDIV_SEL  2
+`define PLL_FBDIV_SEL 5
+`define PLL_IDIV_SEL  1
 `define PLL_ODIV_SEL  16
+`define DYN_SDIV_SEL  6
 
 module ser_pll (output clkout, output clkoutd, input clkin);
 	wire VCC;
@@ -120,7 +135,7 @@ module ser_pll (output clkout, output clkoutd, input clkin);
 	defparam pll0.DYN_IDIV_SEL="false";
 
 	defparam pll0.DYN_ODIV_SEL="false";
-	defparam pll0.DYN_SDIV_SEL=124;
+	defparam pll0.DYN_SDIV_SEL=`DYN_SDIV_SEL;
 	defparam pll0.PSDA_SEL="0000";
 
 endmodule //ser_pll
