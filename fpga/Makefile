@@ -32,7 +32,7 @@ clean:
 		--cst iob/tangnano-default.cst
 
 %-prog: %.fs
-	$(PROGRAMMER) --cable ft2232_b -b ${BOARD} $^
+	$(PROGRAMMER) -f --cable ft2232_b -b ${BOARD} $^
 	
 %-unpacked.v: %.fs
 	gowin_unpack -d ${DEVICE_FAMILY} -o $@ $^

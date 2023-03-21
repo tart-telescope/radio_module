@@ -106,13 +106,20 @@ void setup() {
   
   delay(100);
 
-  // setupRadio(CS_A_NEG);
-  // setupRadio(CS_B_NEG);
+  setupRadio(CS_A_NEG);
+  setupRadio(CS_B_NEG);
+
+  // set up an LED timer
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
 
+// LED blink
+uint32_t previousMillis = 0;
+uint32_t interval = 100;
+int ledState = LOW; 
+
+
+void loop() {
   int ld_a = digitalRead(IN_LD_A);
   int ld_b = digitalRead(IN_LD_B);
   int sw_1 = digitalRead(SW_1);
@@ -120,11 +127,17 @@ void loop() {
   digitalWrite(LED_LD_A, ld_a);
   digitalWrite(LED_LD_B, ld_b);
 
-  
-  digitalWrite(LED_ANT_B, HIGH);
+  digitalWrite(LED_ANT_A, sw_1);
 
-  delay(1000);
-  digitalWrite(LED_ANT_B, LOW);
-  delay(1000);
+  uint32_t currentMillis = millis();
 
+  if (currentMillis - previousMillis > interval) {
+    previousMillis = currentMillis;
+    if (ledState == LOW) 
+      ledState = HIGH; 
+    else 
+      ledState = LOW;
+
+    digitalWrite(LED_ANT_B, ledState);
+  }
 }

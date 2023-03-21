@@ -1,4 +1,4 @@
-`include "ser_pll.v"
+//`include "ser_pll.v"
 
 
 
@@ -31,16 +31,16 @@ module top (
     // Set up PLL for the serialized data
     // input is 16.368 MHz GPS clock. Output is
     // the serialized data clock.
-    ser_pll pll_x10(.clkout(fast_clk),
-                    .clkoutd(rx_clk), 
-                    .clkin(SYS_CLK));
-    //assign fast_clk = SYS_CLK;
+    //ser_pll pll_x10(.clkout(fast_clk),
+    //                .clkoutd(rx_clk), 
+    //                .clkin(SYS_CLK));
+    assign fast_clk = SYS_CLK;
     
     reg [2:0] ptr = 0;
 
     always @(posedge rx_clk)
     begin
-        tx_data <= {R0_I, R0_0, R1_I, R1_Q };
+        tx_data <= {R0_I, R0_Q, R1_I, R1_Q };
     end
 
     always @(posedge fast_clk)
