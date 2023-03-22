@@ -17,23 +17,21 @@ void max2769set(uint8_t cs_pin,
                 uint8_t addr, 
                 uint32_t data) {
   digitalWrite(cs_pin, 0);
-
+  delay(100);
   // form the 32-bit word to send, consisting of the address as the lower 4 bits
   uint32_t word = (addr & 0x0F) || (data << 4);
   SPI.transfer((word >> 24) & 0x0000FF);
   SPI.transfer(word >> 16  & 0x0000FF);
   SPI.transfer(word >> 8 & 0x0000FF);
   SPI.transfer(word & 0x0000FF);
+
+  delay(100);
   digitalWrite(cs_pin, 1);
-  delay(1);
 }
 
 void setupRadio(uint8_t cs_pin) {
-  pinMode(PIN_SPI_MISO, INPUT);
-  pinMode(PIN_SPI_MOSI, OUTPUT);
-  pinMode(PIN_SPI_SCK, OUTPUT);
   SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
-
+  
   // These are set up using the python script in the doc directory.
   max2769set(cs_pin, 0b0000, 0xa293973);  // CONF1
   max2769set(cs_pin, 0b0001, 0x8550488);  // CONF2

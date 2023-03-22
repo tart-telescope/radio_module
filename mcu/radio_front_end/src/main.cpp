@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <SPI.h>
 
 #include "hardware.h"
 #include "max2769.h"
@@ -32,10 +33,16 @@ void setup() {
   digitalWrite(EN_A_NEG, LOW);
   digitalWrite(EN_B_NEG, LOW);
   
-  delay(100);
+  pinMode(PIN_SPI_MISO, INPUT);
+  pinMode(PIN_SPI_MOSI, OUTPUT);
+  pinMode(PIN_SPI_SCK, OUTPUT);
+  pinMode(CS_A_NEG, OUTPUT);
+  pinMode(CS_B_NEG, OUTPUT);
 
-  // setupRadio(CS_A_NEG);
-  // setupRadio(CS_B_NEG);
+  SPI.begin();
+
+  setupRadio(CS_A_NEG);
+  setupRadio(CS_B_NEG);
 }
 
 
