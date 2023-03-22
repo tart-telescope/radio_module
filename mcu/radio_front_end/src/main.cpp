@@ -34,8 +34,8 @@ void setup() {
   
   delay(100);
 
-  setupRadio(CS_A_NEG);
-  setupRadio(CS_B_NEG);
+  // setupRadio(CS_A_NEG);
+  // setupRadio(CS_B_NEG);
 }
 
 
