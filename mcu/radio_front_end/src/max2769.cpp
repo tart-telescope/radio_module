@@ -25,6 +25,7 @@ void max2769set(uint8_t cs_pin,
   SPI.transfer(word >> 8 & 0x0000FF);
   SPI.transfer(word & 0x0000FF);
   digitalWrite(cs_pin, 1);
+  delay(1);
 }
 
 void setupRadio(uint8_t cs_pin) {
@@ -33,10 +34,11 @@ void setupRadio(uint8_t cs_pin) {
   pinMode(PIN_SPI_SCK, OUTPUT);
   SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
 
+  // These are set up using the python script in the doc directory.
   max2769set(cs_pin, 0b0000, 0xa293973);  // CONF1
   max2769set(cs_pin, 0b0001, 0x8550488);  // CONF2
   max2769set(cs_pin, 0b0010, 0xeafe1dc);  // CONF3
-  max2769set(cs_pin, 0b0011, 0x9ec0000);  // PLL
+  max2769set(cs_pin, 0b0011, 0x9ec0008);  // PLL
 
   SPI.endTransaction();
 }

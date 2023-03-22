@@ -37,7 +37,7 @@ module radio_module (
     //assign fast_clk = SYS_CLK;
     
     reg [1:0] ptr = 0;
-
+    
     always @(posedge rx_clk)
     begin
         // latch the tx data
@@ -46,8 +46,8 @@ module radio_module (
 
     always @(posedge fast_clk)
     begin
-        if (ptr == 0) SYNC = 1;
-        else SYNC = 0;
+        if (ptr == 2'b00) SYNC <= 1;
+        else SYNC <= 0;
         DATA_OUT <= tx_data[ptr];
         ptr <= ptr + 1;
     end

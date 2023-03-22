@@ -99,8 +99,8 @@ def getPLL():
     reg.setBit(8, 0);   # PFDEN
     reg.setBit(7, 0);   # RESERVED
     reg.setBits(6, 4, "000");   # RESERVED
-    reg.setBit(3, 0);   # PWRSAV
-    reg.setBit(2, 0);   # RESERVED
+    reg.setBit(3, 1);   # INT_PLL
+    reg.setBit(2, 0);   # PWRSAV
     reg.setBit(1, 0);   # RESERVED
     return reg
 
