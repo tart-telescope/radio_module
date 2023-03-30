@@ -7,6 +7,19 @@
 
 // SPI mapping
 
+void notify_delay(int millisec) {
+  int led_state = 0;
+  int sub_delay = millisec / 20;
+  for (int i=0; i<20;i++) {
+    digitalWrite(LED_LD_A, led_state);
+    digitalWrite(LED_LD_B, ~led_state);
+    digitalWrite(LED_ANT_A, led_state); 
+    digitalWrite(LED_ANT_B, ~led_state);
+    delay(sub_delay);
+    led_state = ~led_state;
+  }
+
+}
 
 void setup() {
   // put your setup code here, to run once:
@@ -24,15 +37,16 @@ void setup() {
   // Power on the FPGA - this gets the clock going for the radios.
   pinMode(EN_FPGA_NEG, OUTPUT);
   digitalWrite(EN_FPGA_NEG, LOW);
-  delay(100); // wait 100 ms
+  notify_delay(1000);
 
-  // Power on the radios
+  // Power on t0he radios
   pinMode(EN_A_NEG, OUTPUT);
   pinMode(EN_B_NEG, OUTPUT);
 
   digitalWrite(EN_A_NEG, LOW);
   digitalWrite(EN_B_NEG, LOW);
-  
+  notify_delay(1000);
+
   pinMode(PIN_SPI_MISO, INPUT);
   pinMode(PIN_SPI_MOSI, OUTPUT);
   pinMode(PIN_SPI_SCK, OUTPUT);
@@ -46,31 +60,19 @@ void setup() {
 }
 
 
-// LED blink
-uint32_t previousMillis = 0;
-uint32_t interval = 100;
-int ledState = LOW; 
-
-
 void loop() {
   int ld_a = digitalRead(IN_LD_A);
   int ld_b = digitalRead(IN_LD_B);
-  int sw_1 = digitalRead(SW_1);
 
   digitalWrite(LED_LD_A, ld_a);
   digitalWrite(LED_LD_B, ld_b);
 
-  digitalWrite(LED_ANT_A, sw_1);
+  int ant_a = digitalRead(IN_ANT_A);
+  int ant_b = digitalRead(IN_ANT_B);
+  int sw_1 = digitalRead(IN_SW_1);
+  
+  digitalWrite(LED_ANT_A, IN_ANT_B); 
+  digitalWrite(LED_ANT_B, IN_ANT_B);
 
-  uint32_t currentMillis = millis();
-
-  if (currentMillis - previousMillis > interval) {
-    previousMillis = currentMillis;
-    if (ledState == LOW) 
-      ledState = HIGH; 
-    else 
-      ledState = LOW;
-
-    digitalWrite(LED_ANT_B, ledState);
-  }
+  delay(1);
 }

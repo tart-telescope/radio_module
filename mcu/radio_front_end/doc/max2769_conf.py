@@ -27,60 +27,85 @@ class Register:
 
 def getConf1():
     reg = Register("CONF1", "0000")
-    reg.setBits(27, 27, "1");   # ret[27] = 1; enable
-    reg.setBits(26, 26, "0");   # IDLE off
+    reg.setBit(27, "1");   # ret[27] = 1; enable
+    reg.setBit(26, "0");   # IDLE off
     reg.setBits(25, 22, "1000");   # Reserved
     reg.setBits(21, 20, "10");   # Reserved
     reg.setBits(19, 18, "10");   # Reserved
     reg.setBits(17, 16, "01");   # Reserved
-    reg.setBits(15, 15, "0");   # MIXPOLE
+    reg.setBit(15, "0");   # MIXPOLE
     reg.setBits(14, 13, "01");   # ret[14:13] = 01 LNA2 on
-    reg.setBits(12, 12, "1");   # MIXEN enable mixer
-    reg.setBits(11, 11, "1");   # ANTEN enable antenna
+    reg.setBit(12, "1");   # MIXEN enable mixer
+    reg.setBit(11, "1");   # ANTEN enable antenna
     reg.setBits(10, 5, "001011"); # FCEN = 4.092 MHz
     reg.setBits(4, 3, "10"); # RBW = 4.2 MHz
-    reg.setBits(2, 2, "0"); # 5th order Butterworth
-    reg.setBits(1, 1, "1"); # Complex bandpass filter mode
-    reg.setBits(0, 0, "1"); # Keep filter gain
+    reg.setBit(2, "0"); # 5th order Butterworth
+    reg.setBit(1, "1"); # Complex bandpass filter mode
+    reg.setBit(0, "1"); # Keep filter gain
     return reg
 
 
 def getConf2():
     reg = Register("CONF2", "0001")
-    reg.setBits(27, 27, "1");   # IQEN enable
+    reg.setBit(27, "1");   # IQEN enable
     reg.setBits(26, 15, "000010101010");   # GAINREF
     reg.setBits(14, 13, "00");   # Reserved
     reg.setBits(12, 11, "00");   # AGC Mode INDEPENDENT I/Q
     reg.setBits(10, 9, "10");   # FORMAT Sign Magnitude
-    reg.setBits(8, 6, "010");   # 2 bits ADC
+    reg.setBits(8, 6, "000");   # 1 bits ADC (010 is 2-bits)
     reg.setBits(5, 4, "00");   # DRVCFG CMOS logic
-    reg.setBits(3, 3, "1");   # Reserved
-    reg.setBits(2, 2, "0");   # Reserved
+    reg.setBit(3, "1");   # Reserved
+    reg.setBit(2, "0");   # Reserved
     reg.setBits(1, 0, "00");   # DIEID
     return reg
 
-def getConf3():
+def getConf3Normal():
     reg = Register("CONF3", "0010")
     reg.setBits(27, 22, "111010");   # GAININ 57 dB
-    reg.setBits(21, 21, "1");   # RESERVED
-    reg.setBits(20, 20, "0");   # HIGHLOADEN
-    reg.setBits(19, 19, "1");   # RESERVED
-    reg.setBits(18, 18, "1");   # RESERVED
-    reg.setBits(17, 17, "1");   # RESERVED
-    reg.setBits(16, 16, "1");   # RESERVED
-    reg.setBits(15, 15, "1");   # FHIPEN Highpass coupling
-    reg.setBits(14, 14, "1");   # RESERVED
-    reg.setBits(13, 13, "1");   # RESERVED
-    reg.setBits(12, 12, "0");   # RESERVED
-    reg.setBits(11, 11, "0");   # STRMEN
-    reg.setBits(10, 10, "0");   # STRMSTART
-    reg.setBits(9, 9, "0");   # STRMSTOP
+    reg.setBit(21, "1");   # RESERVED
+    reg.setBit(20, "0");   # HIGHLOADEN
+    reg.setBit(19, "1");   # RESERVED
+    reg.setBit(18, "1");   # RESERVED
+    reg.setBit(17, "1");   # RESERVED
+    reg.setBit(16, "1");   # RESERVED
+    reg.setBit(15, "1");   # FHIPEN Highpass coupling
+    reg.setBit(14, "1");   # RESERVED
+    reg.setBit(13, "1");   # RESERVED
+    reg.setBit(12, "0");   # RESERVED
+    reg.setBit(11, "0");   # STRMEN
+    reg.setBit(10, "0");   # STRMSTART
+    reg.setBit(9, "0");   # STRMSTOP
     reg.setBits(8, 6, "111");   # RESERVED
     reg.setBits(5, 4, "01");   # NUMBER of bits streamed STRMBITS
-    reg.setBits(3, 3, "1");   # STAMPEN
-    reg.setBits(2, 2, "1");   # TIMESYNCEN
-    reg.setBits(1, 1, "0");   # DATASYNCEN
-    reg.setBits(0, 0, "0");   # STRMRST Reset all counters
+    reg.setBit(3, "1");   # STAMPEN
+    reg.setBit(2, "1");   # TIMESYNCEN
+    reg.setBit(1, "0");   # DATASYNCEN
+    reg.setBit(0, "0");   # STRMRST Reset all counters
+    return reg
+
+
+def getConf3Stream():
+    reg = Register("CONF3", "0010")
+    reg.setBits(27, 22, "111010");   # GAININ 57 dB
+    reg.setBit(21, "1");   # RESERVED
+    reg.setBit(20, "0");   # HIGHLOADEN
+    reg.setBit(19, "1");   # RESERVED
+    reg.setBit(18, "1");   # RESERVED
+    reg.setBit(17, "1");   # RESERVED
+    reg.setBit(16, "1");   # RESERVED
+    reg.setBit(15, "1");   # FHIPEN Highpass coupling
+    reg.setBit(14, "1");   # RESERVED
+    reg.setBit(13, "1");   # RESERVED
+    reg.setBit(12, "0");   # RESERVED
+    reg.setBit(11, "1");   # STRMEN
+    reg.setBit(10, "1");   # STRMSTART
+    reg.setBit(9, "0");   # STRMSTOP
+    reg.setBits(8, 6, "111");   # RESERVED
+    reg.setBits(5, 4, "01");   # NUMBER of bits streamed STRMBITS
+    reg.setBit(3, "1");   # STAMPEN
+    reg.setBit(2, "1");   # TIMESYNCEN
+    reg.setBit(1, "1");   # DATASYNCEN
+    reg.setBit(0, "0");   # STRMRST Reset all counters
     return reg
 
 
@@ -107,5 +132,5 @@ def getPLL():
 if __name__=="__main__":
     getConf1().disp()
     getConf2().disp()
-    getConf3().disp()
+    getConf3Stream().disp()
     getPLL().disp()

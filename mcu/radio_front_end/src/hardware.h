@@ -35,7 +35,7 @@
 // Button on Board
 
 
-#define SW_1 PIN_PA3 // 47
+#define IN_SW_1 PIN_PA3 // 47
 
 #define A0 PIN_PB0  // 4
 #define A1 PIN_PB1  // 5
