@@ -1,0 +1,4 @@
+*.bak
+*-backups
+*-cache
+*.kicad_prl

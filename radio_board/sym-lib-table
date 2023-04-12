@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "tart")(type "KiCad")(uri "${KIPRJMOD}/tart.kicad_sym")(options "")(descr ""))
+)
