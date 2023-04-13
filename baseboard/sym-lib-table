@@ -1,4 +1,6 @@
 (sym_lib_table
   (version 7)
   (lib (name "baseboard")(type "KiCad")(uri "${KIPRJMOD}/baseboard.kicad_sym")(options "")(descr ""))
+  (lib (name "tart")(type "KiCad")(uri "${KIPRJMOD}/../radio_board/tart.kicad_sym")(options "")(descr ""))
+  (lib (name "ripple")(type "KiCad")(uri "/home/tim/gitlab/projects/tim/ripple/ripple.kicad_sym")(options "")(descr ""))
 )
