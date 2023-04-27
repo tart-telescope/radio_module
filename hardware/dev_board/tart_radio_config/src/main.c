@@ -14,7 +14,11 @@
 #define LED_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE)
 
 
-// Pins for the programming interface
+// Pins for the programming interface of the MAX2769
+// SCLK PA2
+// SDATA PD6
+// CS# PD5
+// PGM PC4
 
 #define TART_PGM_PORT GPIOC 
 #define TART_PGM_PIN GPIO_Pin_4
@@ -28,8 +32,30 @@
 
 #define TART_SCLK_PORT GPIOA
 #define TART_SCLK_PIN GPIO_Pin_2
-#define LED_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE)
+#define TART_SCLK_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE)
 
+void TART_Pin_Init() {
+
+	GPIO_InitTypeDef GPIO_InitStructure = {0};
+
+	TART_SCLK_CLOCK_ENABLE;
+	GPIO_InitStructure.GPIO_Pin = LED_GPIO_PIN | TART_SCLK_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(LED_GPIO_PORT, &GPIO_InitStructure);
+
+	TART_CS_CLOCK_ENABLE;
+	GPIO_InitStructure.GPIO_Pin = TART_CS_PIN | TART_SDATA_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(TART_CS_PORT, &GPIO_InitStructure);
+
+	TART_PGM_CLOCK_ENABLE;
+	GPIO_InitStructure.GPIO_Pin = TART_PGM_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(TART_PGM_PORT, &GPIO_InitStructure);
+}
 
 void NMI_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 void HardFault_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
@@ -42,13 +68,14 @@ int main(void)
 	SystemCoreClockUpdate();
 	Delay_Init();
 
-	GPIO_InitTypeDef GPIO_InitStructure = {0};
+	TART_Pin_Init();
 
-	LED_CLOCK_ENABLE;
-	GPIO_InitStructure.GPIO_Pin = LED_GPIO_PIN;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(LED_GPIO_PORT, &GPIO_InitStructure);
+	GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, 0);
+	GPIO_WriteBit(TART_SDATA_PORT, TART_SDATA_PIN, 0);
+	GPIO_WriteBit(TART_SCLK_PORT, TART_SCLK_PIN, 0);
+
+	// Preconfigured States PGM -> Logic Hi
+	GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, 1);
 
 	uint8_t ledState = 0;
 	while (1)
