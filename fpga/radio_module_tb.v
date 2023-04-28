@@ -37,10 +37,10 @@ module radio_module_tb;
     
     radio_module dut(
         .SYS_CLK(SYS_CLK),
-        .R1_I(R1_I),
-        .R1_Q(R1_Q),
         .R0_I(R0_I),
         .R0_Q(R0_Q),
+        .R1_I(R1_I),
+        .R1_Q(R1_Q),
         .DATA_OUT(DATA_OUT),
     
         .SYNC(SYNC),

@@ -47,7 +47,7 @@ def getConf1():
 
 def getConf2():
     reg = Register("CONF2", "0001")
-    reg.setBit(27, "1");   # IQEN enable
+    reg.setBit(27, "0");   # IQEN enable (I channel only is 0)
     reg.setBits(26, 15, "000010101010");   # GAINREF
     reg.setBits(14, 13, "00");   # Reserved
     reg.setBits(12, 11, "00");   # AGC Mode INDEPENDENT I/Q
@@ -132,5 +132,5 @@ def getPLL():
 if __name__=="__main__":
     getConf1().disp()
     getConf2().disp()
-    getConf3Stream().disp()
+    getConf3Normal().disp()
     getPLL().disp()

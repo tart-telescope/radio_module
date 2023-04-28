@@ -96,11 +96,11 @@ endmodule //Gowin_rPLL
 `define PLL_DEVICE "GW1N-1"
 `define PLL_FCLKIN "16"
 `define PLL_FBDIV_SEL 1
-`define PLL_IDIV_SEL  0
-`define PLL_ODIV_SEL  16
-`define DYN_SDIV_SEL  4
+`define PLL_IDIV_SEL  1
+`define PLL_ODIV_SEL  32
+`define DYN_SDIV_SEL  2
 
-module ser_pll (output clkout, output clkoutd, input clkin);
+module ser_pll (output fast_clock, output rx_clock, input clkin);
 	wire VCC;
 	wire GND;
 	assign VCC = 1'b1;
@@ -115,10 +115,10 @@ module ser_pll (output clkout, output clkoutd, input clkin);
     reg reset = 0;
     
 	Gowin_rPLL pll0(
-		.clkout(clkout),
+		.clkout(fast_clock),
 		.clkfb(GND),
 		.clkin(clkin),
-		.clkoutd_o(clkoutd),
+		.clkoutd_o(rx_clock),
 		.lock_o(lock),
 		.fdiv(fdiv),
 		.idiv(idiv),

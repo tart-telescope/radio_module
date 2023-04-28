@@ -39,13 +39,13 @@ void setup() {
   digitalWrite(EN_FPGA_NEG, LOW);
   notify_delay(1000);
 
-  // Power on t0he radios
+  // Power on the radios
   pinMode(EN_A_NEG, OUTPUT);
   pinMode(EN_B_NEG, OUTPUT);
 
   digitalWrite(EN_A_NEG, LOW);
   digitalWrite(EN_B_NEG, LOW);
-  notify_delay(1000);
+  notify_delay(2000);
 
   pinMode(PIN_SPI_MISO, INPUT);
   pinMode(PIN_SPI_MOSI, OUTPUT);
@@ -61,18 +61,16 @@ void setup() {
 
 
 void loop() {
-  int ld_a = digitalRead(IN_LD_A);
-  int ld_b = digitalRead(IN_LD_B);
+  uint8_t ld_a = digitalRead(IN_LD_A);
+  uint8_t ld_b = digitalRead(IN_LD_B);
+  uint8_t ant_a = digitalRead(IN_ANT_A);
+  uint8_t ant_b = digitalRead(IN_ANT_B);
+  uint8_t sw_1 = digitalRead(IN_SW_1);
 
   digitalWrite(LED_LD_A, ld_a);
   digitalWrite(LED_LD_B, ld_b);
-
-  int ant_a = digitalRead(IN_ANT_A);
-  int ant_b = digitalRead(IN_ANT_B);
-  int sw_1 = digitalRead(IN_SW_1);
-  
-  digitalWrite(LED_ANT_A, IN_ANT_B); 
-  digitalWrite(LED_ANT_B, IN_ANT_B);
+  digitalWrite(LED_ANT_A, ant_a); 
+  digitalWrite(LED_ANT_B, ant_b);
 
   delay(1);
 }

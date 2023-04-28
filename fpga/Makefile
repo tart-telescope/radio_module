@@ -13,7 +13,7 @@ MAIN ?= radio_module_tb
 # LED = 8
 
 icarus:
-	iverilog -v -D "SIM=1" -o${MAIN}.vvp -m radio_module_tb.v radio_module_tb.v
+	iverilog -v -D "SIM=1" -o${MAIN}.vvp -m radio_module_tb radio_module_tb.v
 	vvp -v ${MAIN}.vvp -lxt2
 
 

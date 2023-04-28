@@ -18,6 +18,10 @@
 #define IN_ANT_A PIN_PC6 // 18
 #define IN_ANT_B PIN_PC7 // 19
 
+// Serial Interface
+
+#define SER_CLK PIN_PA6
+#define SER_DATA PIN_PA4 
 
 // Enable component power
 #define EN_A_NEG PIN_PF0 // 34
