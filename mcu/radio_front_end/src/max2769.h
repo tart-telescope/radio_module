@@ -1,4 +1,4 @@
 
 // Max2769_handler
 
-void setupRadio(uint8_t cs_pin);
+void setupRadio(const pin_size_t& cs_pin);

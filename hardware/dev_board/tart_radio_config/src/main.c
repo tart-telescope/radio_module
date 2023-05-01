@@ -1,3 +1,5 @@
+#define SYSCLK_FREQ_48MHZ_HSI 48000000
+
 #if defined(CH32V00X)
 #include <ch32v00x.h>
 #elif defined(CH32V10X)
@@ -7,11 +9,10 @@
 #elif defined(CH32V30X)
 #include <ch32v30x.h>
 #endif
-//#include <debug.h>
+#include <debug.h>
 
 #define LED_GPIO_PORT GPIOA
 #define LED_GPIO_PIN GPIO_Pin_1
-#define LED_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE)
 
 
 // Pins for the programming interface of the MAX2769
@@ -22,35 +23,32 @@
 
 #define TART_PGM_PORT GPIOC 
 #define TART_PGM_PIN GPIO_Pin_4
-#define TART_PGM_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE)
 
 #define TART_CS_PORT GPIOD
 #define TART_CS_PIN GPIO_Pin_5
 #define TART_SDATA_PORT GPIOD
 #define TART_SDATA_PIN GPIO_Pin_6
-#define TART_CS_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE)
 
 #define TART_SCLK_PORT GPIOA
 #define TART_SCLK_PIN GPIO_Pin_2
-#define TART_SCLK_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE)
 
 void TART_Pin_Init() {
 
 	GPIO_InitTypeDef GPIO_InitStructure = {0};
 
-	TART_SCLK_CLOCK_ENABLE;
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_AFIO, ENABLE);
 	GPIO_InitStructure.GPIO_Pin = LED_GPIO_PIN | TART_SCLK_PIN;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(LED_GPIO_PORT, &GPIO_InitStructure);
 
-	TART_CS_CLOCK_ENABLE;
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
 	GPIO_InitStructure.GPIO_Pin = TART_CS_PIN | TART_SDATA_PIN;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(TART_CS_PORT, &GPIO_InitStructure);
 
-	TART_PGM_CLOCK_ENABLE;
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 	GPIO_InitStructure.GPIO_Pin = TART_PGM_PIN;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
@@ -70,12 +68,12 @@ int main(void)
 
 	TART_Pin_Init();
 
-	GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, 0);
-	GPIO_WriteBit(TART_SDATA_PORT, TART_SDATA_PIN, 0);
-	GPIO_WriteBit(TART_SCLK_PORT, TART_SCLK_PIN, 0);
+	GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_RESET);
+	GPIO_WriteBit(TART_SDATA_PORT, TART_SDATA_PIN, Bit_SET);
+	GPIO_WriteBit(TART_SCLK_PORT, TART_SCLK_PIN, Bit_RESET);
 
 	// Preconfigured States PGM -> Logic Hi
-	GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, 1);
+	GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_SET);
 
 	uint8_t ledState = 0;
 	while (1)
