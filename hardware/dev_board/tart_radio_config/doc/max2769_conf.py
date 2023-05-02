@@ -101,7 +101,11 @@ def getConf3Stream():
     reg.setBit(10, "1");   # STRMSTART
     reg.setBit(9, "0");   # STRMSTOP
     reg.setBits(8, 6, "111");   # RESERVED
-    reg.setBits(5, 4, "01");   # NUMBER of bits streamed STRMBITS
+    reg.setBits(5, 4, "11");   # NUMBER of bits streamed STRMBITS 
+                            #       00: I MSB
+                            #       01: I MSB, I LSB,
+                            #       10: I MSB, Q MSB,
+                            #       11: I MSB, I LSB, Q MSB, Q LSB,
     reg.setBit(3, "1");   # STAMPEN
     reg.setBit(2, "1");   # TIMESYNCEN
     reg.setBit(1, "1");   # DATASYNCEN
