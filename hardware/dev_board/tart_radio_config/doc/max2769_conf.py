@@ -102,7 +102,10 @@ def getConf3Stream(start=0):
     reg.setBit(13, "1");   # RESERVED
     reg.setBit(12, "0");   # RESERVED
     reg.setBit(11, "1");   # STRMEN
-    reg.setBit(10, f"{start}");   # STRMSTART
+    if start == 0:
+        reg.setBit(10, 0);   # STRMSTART
+    else:
+        reg.setBit(10, 1);   # STRMSTART
     reg.setBit(9, "0");   # STRMSTOP
     reg.setBits(8, 6, "111");   # RESERVED
     reg.setBits(5, 4, "10");   # NUMBER of bits streamed STRMBITS 
@@ -135,6 +138,7 @@ def getPLL():
     reg.setBit(3, 1);   # INT_PLL
     reg.setBit(2, 0);   # PWRSAV
     reg.setBit(1, 0);   # RESERVED
+    reg.setBit(0, 0);   # RESERVED
     return reg
 
 import argparse
