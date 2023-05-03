@@ -43,7 +43,7 @@ def getConf1():
                                   #     '001011' = 4.092MHz
                                   #     '010011' = 10.0MHz
     reg.setBits(4, 3, "10");      # RBW = '00': 2.5MHz, '10': 4.2 MHz, '01': 9.66MHz
-    reg.setBit(2, "1"); # 0: 3rd order, 1: 5th order Butterworth
+    reg.setBit(2, "0"); # 0: 3rd order, 1: 5th order Butterworth
     reg.setBit(1, "1"); # Complex bandpass filter mode
     reg.setBit(0, "1"); # Keep filter gain
     return reg
@@ -56,7 +56,7 @@ def getConf2():
     reg.setBits(14, 13, "00");   # Reserved
     reg.setBits(12, 11, "00");   # AGC Mode INDEPENDENT I/Q
     reg.setBits(10, 9, "01");   # FORMAT '01': Sign Magnitude, 
-    reg.setBits(8, 6, "100");   # 1 bits ADC ('000': 1-bit, '010': 2-bits, '100': 3-bits)0
+    reg.setBits(8, 6, "010");   # 1 bits ADC ('000': 1-bit, '010': 2-bits, '100': 3-bits)0
     reg.setBits(5, 4, "00");   # DRVCFG '00': CMOS logic, '01': Differential?, '1x': Analog
     reg.setBit(3, "1");   # Reserved
     reg.setBit(2, "1");   # Reserved
