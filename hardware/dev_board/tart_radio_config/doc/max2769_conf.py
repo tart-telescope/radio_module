@@ -74,8 +74,8 @@ def getConf3Normal():
     reg.setBit(16, "1");   # RESERVED
     reg.setBit(15, "1");   # FHIPEN Highpass coupling
     reg.setBit(14, "1");   # RESERVED
-    reg.setBit(13, "1");   # RESERVED
-    reg.setBit(12, "0");   # RESERVED
+    reg.setBit(13, "1");   # PGAIEN I channel PGA Enable
+    reg.setBit(12, "1");   # PGAQEN Q channel PGA Enable
     reg.setBit(11, "0");   # STRMEN
     reg.setBit(10, "0");   # STRMSTART
     reg.setBit(9, "0");   # STRMSTOP
@@ -99,8 +99,8 @@ def getConf3Stream(start=0):
     reg.setBit(16, "1");   # RESERVED
     reg.setBit(15, "1");   # FHIPEN Highpass coupling
     reg.setBit(14, "1");   # RESERVED
-    reg.setBit(13, "1");   # RESERVED
-    reg.setBit(12, "0");   # RESERVED
+    reg.setBit(13, "1");   # PGAIEN I channel PGA Enable
+    reg.setBit(12, "1");   # PGAQEN Q channel PGA Enable
     reg.setBit(11, "1");   # STRMEN
     if start == 0:
         reg.setBit(10, 0);   # STRMSTART
@@ -114,9 +114,9 @@ def getConf3Stream(start=0):
                             #       10: I MSB, Q MSB,
                             #       11: I MSB, I LSB, Q MSB, Q LSB,
     reg.setBit(3, "1");   # STAMPEN
-    reg.setBit(2, "0");   # TIMESYNCEN
+    reg.setBit(2, "1");   # TIMESYNCEN
     reg.setBit(1, "1");   # DATASYNCEN
-    reg.setBit(0, "0");   # STRMRST Reset all counters
+    reg.setBit(0,  0);    # STRMRST Reset all counters
     return reg
 
 

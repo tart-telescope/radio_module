@@ -53,14 +53,20 @@ void max2769set(GPIO_TypeDef *cs_port, pin_t cs_pin,
     Delay_Ms(1);
 }
 
-void setupRadio(GPIO_TypeDef *cs_port, pin_t cs_pin)
+void setupRadioStream(GPIO_TypeDef *cs_port, pin_t cs_pin)
 {
-    // These are set up using the python script in the doc directory.
-  max2769set(cs_port, cs_pin, 0b0000, 0xa293973);  // CONF1
+ max2769set(cs_port, cs_pin, 0b0000, 0xa293973);  // CONF1
   max2769set(cs_port, cs_pin, 0b0001, 0x855028c);  // CONF2
   max2769set(cs_port, cs_pin, 0b0010, 0xeafe1dc);  // CONF3
-  max2769set(cs_port, cs_pin, 0b0010, 0xeafe9ea);  // CONF3 (Streaming) start=0
+  max2769set(cs_port, cs_pin, 0b0010, 0xeaff9ee);  // CONF3 (Streaming) start=0
   max2769set(cs_port, cs_pin, 0b0011, 0x9ec0008);  // PLL
-  Delay_Ms(1);
-  max2769set(cs_port, cs_pin, 0b0010, 0xeafedea);  // CONF3 (Streaming) start=1
+  max2769set(cs_port, cs_pin, 0b0010, 0xeaffdee);  // CONF3 (Streaming) start=1
+}
+
+void setupRadio(GPIO_TypeDef *cs_port, pin_t cs_pin)
+{
+  max2769set(cs_port, cs_pin, 0b0000, 0xa293973);  // CONF1
+  max2769set(cs_port, cs_pin, 0b0001, 0x855028c);  // CONF2
+  max2769set(cs_port, cs_pin, 0b0010, 0xeaff1dc);  // CONF3
+  max2769set(cs_port, cs_pin, 0b0011, 0x9ec0008);  // PLL
 }
