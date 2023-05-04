@@ -1,0 +1,3 @@
+[submodule "hardware/motherboard/Raspberry-Pi-4-library-for-kicad"]
+	path = hardware/motherboard/Raspberry-Pi-4-library-for-kicad
+	url = https://github.com/TheRoam/Raspberry-Pi-4-library-for-kicad.git
