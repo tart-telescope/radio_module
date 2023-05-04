@@ -2,4 +2,7 @@
   (version 7)
   (lib (name "baseboard")(type "KiCad")(uri "/home/tim/tart-telescope/radio_module/hardware/dev_board/baseboard.kicad_sym")(options "")(descr ""))
   (lib (name "tart")(type "KiCad")(uri "/home/tim/tart-telescope/radio_module/hardware/radio_board/tart.kicad_sym")(options "")(descr ""))
+  (lib (name "Raspberry_Pi_2_or_3")(type "KiCad")(uri "${KIPRJMOD}/Raspberry-Pi-4-library-for-kicad/Raspberry_Pi_2_or_3.kicad_sym")(options "")(descr ""))
+  (lib (name "motherboard")(type "KiCad")(uri "${KIPRJMOD}/motherboard.kicad_sym")(options "")(descr ""))
+  (lib (name "detector_usb")(type "KiCad")(uri "/home/tim/git/detector/hardware/modules/interface/usb_interface/detector_usb.kicad_sym")(options "")(descr ""))
 )
