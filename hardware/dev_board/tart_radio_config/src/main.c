@@ -34,6 +34,9 @@ void HardFault_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 void Delay_Init(void);
 void Delay_Ms(uint32_t n);
 
+
+
+
 int main(void)
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
@@ -41,6 +44,7 @@ int main(void)
 	Delay_Init();
 
 	TART_Pin_Init();
+
 	// Delay_Ms(100);
 
   	GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_SET);
@@ -54,7 +58,7 @@ int main(void)
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_SET);
 	#else
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
-		setupRadio(TART_CS_PORT, TART_CS_PIN);
+		setupRadioStream(TART_CS_PORT, TART_CS_PIN);
 	#endif
 	uint8_t ledState = 0;
 	while (1)
@@ -62,7 +66,7 @@ int main(void)
   		// GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, ledState);
 		GPIO_WriteBit(LED_GPIO_PORT, LED_GPIO_PIN, ledState);
 		ledState ^= 1; // invert for the next run
-		Delay_Us(100);
+		Delay_Ms(100);
 	}
 }
 

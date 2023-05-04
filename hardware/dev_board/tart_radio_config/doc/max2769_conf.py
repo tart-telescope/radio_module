@@ -79,7 +79,7 @@ def getConf3Normal():
     reg.setBit(11, "0");   # STRMEN
     reg.setBit(10, "0");   # STRMSTART
     reg.setBit(9, "0");   # STRMSTOP
-    reg.setBits(8, 6, "111");   # RESERVED
+    reg.setBits(8, 6, "111");   # STRM_COUNT 111 -> 16384 000->128
     reg.setBits(5, 4, "01");   # NUMBER of bits streamed STRMBITS
     reg.setBit(3, "1");   # STAMPEN
     reg.setBit(2, "1");   # TIMESYNCEN
@@ -88,8 +88,14 @@ def getConf3Normal():
     return reg
 
 
-def getConf3Stream(start=0):
-    reg = Register(f"CONF3 (Streaming) start={start}", "0010")
+def getConf3Stream(start=0, reset=0):
+    title = "CONF 3 Streaming: "
+    if start == 1:
+        title += "start "
+    if reset == 1:
+        title += "reset "
+        
+    reg = Register(title, "0010")
     reg.setBits(27, 22, "111010");   # GAININ 57 dB
     reg.setBit(21, "1");   # RESERVED
     reg.setBit(20, "0");   # HIGHLOADEN
@@ -102,21 +108,18 @@ def getConf3Stream(start=0):
     reg.setBit(13, "1");   # PGAIEN I channel PGA Enable
     reg.setBit(12, "1");   # PGAQEN Q channel PGA Enable
     reg.setBit(11, "1");   # STRMEN
-    if start == 0:
-        reg.setBit(10, 0);   # STRMSTART
-    else:
-        reg.setBit(10, 1);   # STRMSTART
+    reg.setBit(10, start);   # STRMSTART
     reg.setBit(9, "0");   # STRMSTOP
-    reg.setBits(8, 6, "111");   # RESERVED
-    reg.setBits(5, 4, "10");   # NUMBER of bits streamed STRMBITS 
+    reg.setBits(8, 6, "000");    # STRM_COUNT 111 -> 16384 000->128
+    reg.setBits(5, 4, "11");   # NUMBER of bits streamed STRMBITS 
                             #       00: I MSB
                             #       01: I MSB, I LSB,
                             #       10: I MSB, Q MSB,
                             #       11: I MSB, I LSB, Q MSB, Q LSB,
-    reg.setBit(3, "1");   # STAMPEN
-    reg.setBit(2, "1");   # TIMESYNCEN
+    reg.setBit(3, "0");   # STAMPEN Stream the time stamp
+    reg.setBit(2, "0");   # TIMESYNCEN
     reg.setBit(1, "1");   # DATASYNCEN
-    reg.setBit(0,  0);    # STRMRST Reset all counters
+    reg.setBit(0,  reset);    # STRMRST Reset all counters
     return reg
 
 
@@ -127,7 +130,7 @@ def getPLL():
     reg.setBit(25, 0);   # RESERVED
     reg.setBit(24, 1);   # REFOUTEN Clock buffer enable
     reg.setBit(23, 1);   # RESERVED
-    reg.setBits(22, 21, "11");   # REFDIV clock frequency = XTAL
+    reg.setBits(22, 21, "00");   # REFDIV clock frequency = XTAL
     reg.setBits(20, 19, "01");   # IXTAL Current programming
     reg.setBits(18, 14, "10000");   # RESERVED
     reg.setBits(13, 10, "0000");   # LDMUX PLL lock detect enable
@@ -141,6 +144,25 @@ def getPLL():
     reg.setBit(0, 0);   # RESERVED
     return reg
 
+
+def getCLK(L_CNT=256, M_CNT=1563):
+    reg = Register("CLK", "0111")
+    reg.setBits(27, 16, f"{L_CNT:>012b}")  # L_CNT Sets the value for the L counter. 
+                                        # 000100000000 = 256 fractional clock divider,
+                                        # 100000000000 = 2048 fractional clock divider.
+    reg.setBits(15,4, f"{M_CNT:>012b}")  # M_CNT Sets the value for the M counter
+    reg.setBit(3, 0)    # FCLKIN Fractional clock divider. (REFDIV in PLL register)
+                        # Set 1 to select the ADC clock to come from the fractional clock divider, 
+                        # or 0 to bypass the ADC clock from the fractional clock divider.
+    reg.setBit(2, 1)    # ADCCLK ADC clock selection. 
+                        # Set 0 to select the ADC and fractional divider clocks to come from
+                        # the reference divider/multiplier.
+    reg.setBit(1, 0)    # SERCLK_SEL. 0 selects the serializer clock to come from the reference divider.
+    reg.setBit(0, 1)    # MODE. DSP interface mode selection
+                        # Set to 1 for standard mode operation.
+    return reg
+
+
 import argparse
 
 if __name__=="__main__":
@@ -151,13 +173,22 @@ if __name__=="__main__":
                         help="Enable streaming")
     ARGS = parser.parse_args()
 
+    LCOUNT = 256
+    MCOUNT = 1563
+    fIn = 16.368e6
+    fOUT_fIN = LCOUNT/(4096 - MCOUNT + LCOUNT)
+    print(fOUT_fIN)
+    print(f"fractional clk = {fOUT_fIN*fIn}")
     getConf1().disp()
     getConf2().disp()
-    getConf3Normal().disp()
     if ARGS.stream:
-        getConf3Stream(start=0).disp()
+        getConf3Stream(reset=1).disp()
+        getConf3Stream(start=0, reset=0).disp()
+    else:
+        getConf3Normal().disp()
     getPLL().disp()
 
     if ARGS.stream:
+        getCLK(L_CNT=LCOUNT, M_CNT=MCOUNT).disp()
         getConf3Stream(start=1).disp()
 
