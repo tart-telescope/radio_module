@@ -4146,6 +4146,9 @@
     (property "Datasheet" "~" (at 110.49 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "LCSC" "C131337" (at 110.49 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 24779a48-05ba-488c-ad93-37373b392133))
     (pin "2" (uuid a36b403a-0e1b-42c2-9f5b-f81c28b520cf))
     (instances
@@ -4211,7 +4214,7 @@
     (property "Value" "GSV331R" (at 121.92 49.9111 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 113.03 66.04 0)
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 113.03 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl331.pdf" (at 111.76 45.72 0)
