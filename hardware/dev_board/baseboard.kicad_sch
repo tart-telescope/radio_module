@@ -1445,7 +1445,6 @@
     )
   )
 
-
   (junction (at 86.36 181.61) (diameter 0) (color 0 0 0 0)
     (uuid 05f15ae8-8040-4c77-b69c-d3f6e3111635)
   )
@@ -4141,7 +4140,7 @@
     (property "Value" "SWDIO" (at 113.03 129.5399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical" (at 110.49 127 0)
+    (property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" (at 110.49 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 110.49 127 0)
