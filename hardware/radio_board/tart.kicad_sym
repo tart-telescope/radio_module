@@ -567,7 +567,7 @@
         (name "GND" (effects (font (size 1.27 1.27))))
         (number "B18" (effects (font (size 1.27 1.27))))
       )
-      (pin output line (at 15.24 17.78 180) (length 3.81) hide
+      (pin output line (at 15.24 17.78 180) (length 3.81)
         (name "R1_Q1" (effects (font (size 1.27 1.27))))
         (number "B2" (effects (font (size 1.27 1.27))))
       )
