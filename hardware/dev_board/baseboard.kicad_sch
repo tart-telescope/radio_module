@@ -1809,6 +1809,10 @@
     (stroke (width 0) (type default))
     (uuid 9ef225df-1e40-41f4-835d-97c9bad5df90)
   )
+  (wire (pts (xy 118.11 35.56) (xy 109.22 35.56))
+    (stroke (width 0) (type default))
+    (uuid 9ff409c9-fc19-4923-b9e6-00e1dfeb0c92)
+  )
   (wire (pts (xy 257.175 103.505) (xy 243.84 103.505))
     (stroke (width 0) (type default))
     (uuid a1d3932b-129f-41bb-86cb-3a26be3b7a87)
@@ -2585,6 +2589,39 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 118.11 43.18 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 3c5d7b58-ca94-429b-a3c1-f8c3c7b341b8)
+    (property "Reference" "#PWR016" (at 118.11 49.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 118.11 48.26 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 118.11 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 118.11 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 118.11 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid eca90048-57a5-437c-a0c4-96d7f5e15068))
+    (instances
+      (project "ripple"
+        (path "/4983c230-8994-40c3-8156-2eec71132809"
+          (reference "#PWR016") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR026") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Connector:TestPoint_Flag") (at 57.15 102.87 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 418225e9-7dee-4c1e-83c7-cad4cf887144)
@@ -3307,6 +3344,32 @@
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
           (reference "#PWR06") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 118.11 39.37 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 83f6ca91-7fb8-42a8-b1fa-10f63a4119f5)
+    (property "Reference" "C5" (at 121.92 38.735 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100nF" (at 121.92 41.275 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 119.0752 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 118.11 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 213fc927-2f54-4815-bd68-fcba6ed0b779))
+    (pin "2" (uuid 06c055a2-738b-48b8-afe2-29d67b60dc2f))
+    (instances
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "C5") (unit 1)
         )
       )
     )
