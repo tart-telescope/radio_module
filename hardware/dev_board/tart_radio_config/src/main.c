@@ -9,23 +9,23 @@ void TART_Pin_Init() {
 
 	GPIO_InitTypeDef GPIO_InitStructure = {0};
 
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_AFIO, ENABLE);
-	GPIO_InitStructure.GPIO_Pin = LED_GPIO_PIN | TART_SCLK_PIN;
+	/* RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_AFIO, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = TART_SCLK_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(LED_GPIO_PORT, &GPIO_InitStructure); */
+
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = TART_CS_PIN | TART_SDATA_PIN | TART_PGM_PIN | TART_SCLK_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(TART_CS_PORT, &GPIO_InitStructure); 
+
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = LED_GPIO_PIN;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(LED_GPIO_PORT, &GPIO_InitStructure);
-
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
-	GPIO_InitStructure.GPIO_Pin = TART_CS_PIN | TART_SDATA_PIN;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(TART_CS_PORT, &GPIO_InitStructure);
-
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-	GPIO_InitStructure.GPIO_Pin = TART_PGM_PIN;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(TART_PGM_PORT, &GPIO_InitStructure);
 }
 
 
@@ -45,9 +45,9 @@ int main(void)
 
 	TART_Pin_Init();
 
-	// Delay_Ms(100);
-
   	GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_SET);
+	Delay_Ms(100);
+
 
 	#if 0
 		GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_RESET);
