@@ -175,7 +175,7 @@
         )
       )
     )
-    (symbol "Device:D_Schottky" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+    (symbol "Device:D_Schottky" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "D" (at 0 2.54 0)
         (effects (font (size 1.27 1.27)))
       )
