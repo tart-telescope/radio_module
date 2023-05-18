@@ -1197,7 +1197,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 37a2440a-aad6-4999-903b-1f799bc22afa)
   )
-  (hierarchical_label "3v3" (shape input) (at 177.8 172.72 0) (fields_autoplaced)
+  (hierarchical_label "VCC_3V" (shape input) (at 177.8 172.72 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 3bf69202-6f86-4288-a536-70e289ea68a3)
   )
