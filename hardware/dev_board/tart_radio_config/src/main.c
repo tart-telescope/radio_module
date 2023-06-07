@@ -45,19 +45,20 @@ int main(void)
 
 	TART_Pin_Init();
 
-  	GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_SET);
-	Delay_Ms(100);
 
 
 	#if 0
+		// Preconfigured States PGM -> Logic Hi
+		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_SET);
+
 		GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_RESET);
 		GPIO_WriteBit(TART_SDATA_PORT, TART_SDATA_PIN, Bit_SET);
 		GPIO_WriteBit(TART_SCLK_PORT, TART_SCLK_PIN, Bit_RESET);
 
-		// Preconfigured States PGM -> Logic Hi
-		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_SET);
 	#else
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
+  		GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_SET);
+		Delay_Ms(100);
 		setupRadioStream(TART_CS_PORT, TART_CS_PIN);
 	#endif
 	uint8_t ledState = 0;

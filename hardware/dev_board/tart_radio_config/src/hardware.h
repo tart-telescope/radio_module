@@ -10,10 +10,10 @@ typedef uint16_t pin_t;
 
 
 // Pins for the programming interface of the MAX2769
-// SCLK PA2
+// SCLK PD4
 // SDATA PD6
 // CS# PD5
-// PGM PC4
+// PGM PD3
 
 #define TART_PGM_PORT GPIOD 
 #define TART_PGM_PIN GPIO_Pin_3
