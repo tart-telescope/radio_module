@@ -14,6 +14,7 @@
 #define MAX_2769_STRM 6
 #define MAX_2769_CLK 7
 
+
 void max2769set(GPIO_TypeDef *cs_port, pin_t cs_pin,
                 uint8_t addr,
                 uint32_t data)
@@ -24,6 +25,8 @@ void max2769set(GPIO_TypeDef *cs_port, pin_t cs_pin,
     GPIO_WriteBit(cs_port, cs_pin, Bit_RESET);
     GPIO_WriteBit(TART_SCLK_PORT, TART_SCLK_PIN, Bit_RESET);
 
+    // Timing parameters from the Max2769 datasheet.
+    // These are in microseconds.
     int t_CSS = 10;
     int t_DS = 10;
     int t_DH = 10;
