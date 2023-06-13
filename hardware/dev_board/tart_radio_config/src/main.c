@@ -46,7 +46,7 @@ int main(void)
 	TART_Pin_Init();
 
 
-	#if 1
+	#if 0
 		// Preconfigured States PGM -> Logic Hi
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_SET);
 
