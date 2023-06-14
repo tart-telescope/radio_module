@@ -455,7 +455,7 @@
       )
     )
     (symbol "TART-PCI-e Edge_1_1"
-      (pin no_connect line (at -15.24 20.32 0) (length 3.81)
+      (pin input line (at -15.24 20.32 0) (length 3.81)
         (name "~{EN}" (effects (font (size 1.27 1.27))))
         (number "A1" (effects (font (size 1.27 1.27))))
       )
