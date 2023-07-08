@@ -22,7 +22,7 @@ void TART_Pin_Init() {
 	GPIO_Init(TART_CS_PORT, &GPIO_InitStructure); 
 
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-	GPIO_InitStructure.GPIO_Pin = LED_GPIO_PIN;
+	GPIO_InitStructure.GPIO_Pin = LED_GPIO_PIN | TART_SLOT1_ENABLE_PIN | TART_SLOT2_ENABLE_PIN;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(LED_GPIO_PORT, &GPIO_InitStructure);
@@ -45,6 +45,15 @@ int main(void)
 
 	TART_Pin_Init();
 
+	// Toggle the Slot Enables to reset the MAX2769
+  	GPIO_WriteBit(TART_SLOT1_ENABLE_PORT, TART_SLOT1_ENABLE_PIN, Bit_RESET);
+	GPIO_WriteBit(TART_SLOT2_ENABLE_PORT, TART_SLOT2_ENABLE_PIN, Bit_RESET);
+
+	Delay_Ms(500);
+
+  	GPIO_WriteBit(TART_SLOT1_ENABLE_PORT, TART_SLOT1_ENABLE_PIN, Bit_SET);
+	GPIO_WriteBit(TART_SLOT2_ENABLE_PORT, TART_SLOT2_ENABLE_PIN, Bit_SET);
+	Delay_Ms(100);
 
 	#if 0
 		// Preconfigured States PGM -> Logic Hi

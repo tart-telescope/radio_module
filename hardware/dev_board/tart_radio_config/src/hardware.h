@@ -26,5 +26,10 @@ typedef uint16_t pin_t;
 #define TART_SCLK_PORT GPIOD
 #define TART_SCLK_PIN GPIO_Pin_4
 
+#define TART_SLOT1_ENABLE_PORT GPIOC
+#define TART_SLOT1_ENABLE_PIN GPIO_Pin_0
+
+#define TART_SLOT2_ENABLE_PORT GPIOC
+#define TART_SLOT2_ENABLE_PIN GPIO_Pin_1
 
 #endif /* __hardware_h__ */
