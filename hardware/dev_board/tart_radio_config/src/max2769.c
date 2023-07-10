@@ -65,7 +65,7 @@ void setupRadioStream(GPIO_TypeDef *cs_port, pin_t cs_pin)
   max2769set(cs_port, cs_pin, 0b0011, 0x9ec0008);  // PLL
   max2769set(cs_port, cs_pin, 0b0111, 0x10061b5);  // CLK
   max2769set(cs_port, cs_pin, 0b0010, 0xeaffc26);  // CONF 3 Streaming: start 
-  max2769set(cs_port, cs_pin, 0b0010, 0xeaff827);  // CONF 3 Streaming: reset 
+  // max2769set(cs_port, cs_pin, 0b0010, 0xeaff827);  // CONF 3 Streaming: reset 
 }
 
 void setupRadio(GPIO_TypeDef *cs_port, pin_t cs_pin)
@@ -74,4 +74,14 @@ void setupRadio(GPIO_TypeDef *cs_port, pin_t cs_pin)
   max2769set(cs_port, cs_pin, 0b0001, 0x855020c);  // CONF2
   max2769set(cs_port, cs_pin, 0b0010, 0xeaff1dc);  // CONF3
   max2769set(cs_port, cs_pin, 0b0011, 0x9ec0008);  // PLL
+}
+
+void shutdownRadio(void) {
+  GPIO_WriteBit(TART_SLOT1_ENABLE_PORT, TART_SLOT1_ENABLE_PIN, Bit_RESET);
+	GPIO_WriteBit(TART_SLOT2_ENABLE_PORT, TART_SLOT2_ENABLE_PIN, Bit_RESET);
+}
+
+void enableRadio(void) {
+  GPIO_WriteBit(TART_SLOT1_ENABLE_PORT, TART_SLOT1_ENABLE_PIN, Bit_SET);
+	GPIO_WriteBit(TART_SLOT2_ENABLE_PORT, TART_SLOT2_ENABLE_PIN, Bit_SET);
 }
