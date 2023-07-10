@@ -45,15 +45,9 @@ int main(void)
 
 	TART_Pin_Init();
 
-	// Toggle the Slot Enables to reset the MAX2769
+	// SHDN the MAX2769 (Shutdown Mode)
   	GPIO_WriteBit(TART_SLOT1_ENABLE_PORT, TART_SLOT1_ENABLE_PIN, Bit_RESET);
 	GPIO_WriteBit(TART_SLOT2_ENABLE_PORT, TART_SLOT2_ENABLE_PIN, Bit_RESET);
-
-	Delay_Ms(500);
-
-  	GPIO_WriteBit(TART_SLOT1_ENABLE_PORT, TART_SLOT1_ENABLE_PIN, Bit_SET);
-	GPIO_WriteBit(TART_SLOT2_ENABLE_PORT, TART_SLOT2_ENABLE_PIN, Bit_SET);
-	Delay_Ms(100);
 
 	#if 0
 		// Preconfigured States PGM -> Logic Hi
@@ -62,11 +56,20 @@ int main(void)
 		GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_RESET);
 		GPIO_WriteBit(TART_SDATA_PORT, TART_SDATA_PIN, Bit_SET);
 		GPIO_WriteBit(TART_SCLK_PORT, TART_SCLK_PIN, Bit_RESET);
-
+		Delay_Ms(100);
+		// Enable the MAX2769 (Normal Mode)
+		GPIO_WriteBit(TART_SLOT1_ENABLE_PORT, TART_SLOT1_ENABLE_PIN, Bit_SET);
+		GPIO_WriteBit(TART_SLOT2_ENABLE_PORT, TART_SLOT2_ENABLE_PIN, Bit_SET);
 	#else
+		// Serial Configuration States PGM -> Logic Low
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
   		GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_SET);
-		Delay_Ms(1000);
+		Delay_Ms(500);
+		// Enable the MAX2769 (Normal Mode)
+		GPIO_WriteBit(TART_SLOT1_ENABLE_PORT, TART_SLOT1_ENABLE_PIN, Bit_SET);
+		GPIO_WriteBit(TART_SLOT2_ENABLE_PORT, TART_SLOT2_ENABLE_PIN, Bit_SET);
+
+		Delay_Ms(100);
 		setupRadioStream(TART_CS_PORT, TART_CS_PIN);
 	#endif
 	uint8_t ledState = 0;

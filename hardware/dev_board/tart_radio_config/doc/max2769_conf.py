@@ -56,7 +56,7 @@ def getConf2():
     reg.setBits(14, 13, "00");   # Reserved
     reg.setBits(12, 11, "00");   # AGC Mode INDEPENDENT I/Q
     reg.setBits(10, 9, "01");   # FORMAT '01': Sign Magnitude, 
-    reg.setBits(8, 6, "010");   # 1 bits ADC ('000': 1-bit, '010': 2-bits, '100': 3-bits)0
+    reg.setBits(8, 6, "010");   # 1 bits ADC ('000': 1-bit, '010': 2-bits, '100': 3-bits)
     reg.setBits(5, 4, "00");   # DRVCFG '00': CMOS logic, '01': Differential?, '1x': Analog
     reg.setBit(3, "1");   # Reserved
     reg.setBit(2, "1");   # Reserved
@@ -87,7 +87,9 @@ def getConf3Normal():
     reg.setBit(0, "0");   # STRMRST Reset all counters
     return reg
 
-
+'''
+https://www.analog.com/en/design-notes/how-to-configure-the-max2769c-adc-registers-for-dsp-interface-mode.html
+'''
 def getConf3Stream(start=0, reset=0):
     title = "CONF 3 Streaming: "
     if start == 1:
@@ -111,13 +113,13 @@ def getConf3Stream(start=0, reset=0):
     reg.setBit(10, start);   # STRMSTART
     reg.setBit(9, "0");   # STRMSTOP
     reg.setBits(8, 6, "000");    # STRM_COUNT 111 -> 16384 000->128
-    reg.setBits(5, 4, "11");   # NUMBER of bits streamed STRMBITS 
+    reg.setBits(5, 4, "10");   # NUMBER of bits streamed STRMBITS 
                             #       00: I MSB
                             #       01: I MSB, I LSB,
                             #       10: I MSB, Q MSB,
                             #       11: I MSB, I LSB, Q MSB, Q LSB,
     reg.setBit(3, "0");   # STAMPEN Stream the time stamp
-    reg.setBit(2, "0");   # TIMESYNCEN
+    reg.setBit(2, "1");   # TIMESYNCEN
     reg.setBit(1, "1");   # DATASYNCEN
     reg.setBit(0,  reset);    # STRMRST Reset all counters
     return reg
@@ -130,7 +132,11 @@ def getPLL():
     reg.setBit(25, 0);   # RESERVED
     reg.setBit(24, 1);   # REFOUTEN Clock buffer enable
     reg.setBit(23, 1);   # RESERVED
-    reg.setBits(22, 21, "00");   # REFDIV clock frequency = XTAL
+    reg.setBits(22, 21, "11");  # REFDIV Clock output divider ratio. Set D22:D21
+                                # 00: clock frequency = XTAL frequency x 2;
+                                # 01: clock frequency = XTAL frequency/4; 
+                                # 10: clock frequency = XTAL frequency/2;
+                                # 11: clock frequency = XTAL frequency;
     reg.setBits(20, 19, "01");   # IXTAL Current programming
     reg.setBits(18, 14, "10000");   # RESERVED
     reg.setBits(13, 10, "0000");   # LDMUX PLL lock detect enable
@@ -154,7 +160,7 @@ def getCLK(L_CNT=256, M_CNT=1563):
     reg.setBit(3, 0)    # FCLKIN Fractional clock divider. (REFDIV in PLL register)
                         # Set 1 to select the ADC clock to come from the fractional clock divider, 
                         # or 0 to bypass the ADC clock from the fractional clock divider.
-    reg.setBit(2, 1)    # ADCCLK ADC clock selection. 
+    reg.setBit(2, 1)    # ADCCLK_SEL ADC clock selection. 
                         # Set 0 to select the ADC and fractional divider clocks to come from
                         # the reference divider/multiplier.
     reg.setBit(1, 0)    # SERCLK_SEL. 0 selects the serializer clock to come from the reference divider.
@@ -177,8 +183,8 @@ if __name__=="__main__":
     MCOUNT = 1563
     fIn = 16.368e6
     fOUT_fIN = LCOUNT/(4096 - MCOUNT + LCOUNT)
-    print(fOUT_fIN)
-    print(f"fractional clk = {fOUT_fIN*fIn}")
+    print(f"fOUT/fIN = {fOUT_fIN}")
+    print(f"ADC fractional clk = {fOUT_fIN*fIn}")
     getConf1().disp()
     getConf2().disp()
     if ARGS.stream:
@@ -190,5 +196,6 @@ if __name__=="__main__":
 
     if ARGS.stream:
         getCLK(L_CNT=LCOUNT, M_CNT=MCOUNT).disp()
-        getConf3Stream(start=1).disp()
+        getConf3Stream(start=1, reset=0).disp()
+        getConf3Stream(start=0, reset=1).disp()
 

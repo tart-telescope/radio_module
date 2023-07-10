@@ -60,11 +60,12 @@ void setupRadioStream(GPIO_TypeDef *cs_port, pin_t cs_pin)
 {
   max2769set(cs_port, cs_pin, 0b0000, 0xa293973);  // CONF1
   max2769set(cs_port, cs_pin, 0b0001, 0x855028c);  // CONF2
-  max2769set(cs_port, cs_pin, 0b0010, 0xeaff833);  // CONF 3 Streaming: reset 
-  max2769set(cs_port, cs_pin, 0b0010, 0xeaff832);  // CONF 3 Streaming: 
-  max2769set(cs_port, cs_pin, 0b0011, 0x98c0008);  // PLL
+  max2769set(cs_port, cs_pin, 0b0010, 0xeaff827);  // CONF 3 Streaming: reset 
+  max2769set(cs_port, cs_pin, 0b0010, 0xeaff826);  // CONF 3 Streaming: 
+  max2769set(cs_port, cs_pin, 0b0011, 0x9ec0008);  // PLL
   max2769set(cs_port, cs_pin, 0b0111, 0x10061b5);  // CLK
-  max2769set(cs_port, cs_pin, 0b0010, 0xeaffc32);  // CONF 3 Streaming: start
+  max2769set(cs_port, cs_pin, 0b0010, 0xeaffc26);  // CONF 3 Streaming: start 
+  max2769set(cs_port, cs_pin, 0b0010, 0xeaff827);  // CONF 3 Streaming: reset 
 }
 
 void setupRadio(GPIO_TypeDef *cs_port, pin_t cs_pin)
