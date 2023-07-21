@@ -407,7 +407,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "motherboard.kicad_pro",
+    "filename": "motherboard_8.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -520,26 +520,6 @@
     [
       "c4586501-c259-45ec-8c9a-0041b20aeaa8",
       "Radio Bank"
-    ],
-    [
-      "c6b862e9-e57f-48de-a0b1-533ec82e1d53",
-      "Configuration MCU"
-    ],
-    [
-      "4cdac945-bfea-41b8-a713-dd53350b6f49",
-      "Radio Bank1"
-    ],
-    [
-      "c2149c1e-79dc-4242-92ab-460a1ff9cddb",
-      "Radio Bank2"
-    ],
-    [
-      "136b456a-c7cd-44e7-a02a-d71ffb958ea6",
-      "Radio Bank3"
-    ],
-    [
-      "37c84537-bbd3-4c74-89f8-4620d4439e82",
-      "Radio Bank4"
     ]
   ],
   "text_variables": {}
