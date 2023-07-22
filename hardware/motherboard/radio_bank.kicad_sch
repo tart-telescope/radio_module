@@ -1089,9 +1089,6 @@
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "J8") (unit 1)
         )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "J10") (unit 1)
-        )
       )
     )
   )
@@ -1139,9 +1136,6 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "C11") (unit 1)
-        )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "C14") (unit 1)
         )
       )
       (project "baseboard"
@@ -1195,9 +1189,6 @@
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "#PWR092") (unit 1)
         )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "#PWR098") (unit 1)
-        )
       )
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
@@ -1249,9 +1240,6 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "#PWR091") (unit 1)
-        )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "#PWR097") (unit 1)
         )
       )
       (project "baseboard"
@@ -1306,9 +1294,6 @@
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "FB4") (unit 1)
         )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "FB5") (unit 1)
-        )
       )
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
@@ -1357,9 +1342,6 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "#FLG08") (unit 1)
-        )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "#FLG010") (unit 1)
         )
       )
       (project "baseboard"
@@ -1441,9 +1423,6 @@
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "J9") (unit 1)
         )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "J11") (unit 1)
-        )
       )
     )
   )
@@ -1490,9 +1469,6 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "#PWR093") (unit 1)
-        )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "#PWR099") (unit 1)
         )
       )
       (project "baseboard"
@@ -1545,9 +1521,6 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "#PWR096") (unit 1)
-        )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "#PWR0100") (unit 1)
         )
       )
       (project "baseboard"
@@ -1603,9 +1576,6 @@
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "U7") (unit 1)
         )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "U8") (unit 1)
-        )
       )
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
@@ -1655,9 +1625,6 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "R5") (unit 1)
-        )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "R6") (unit 1)
         )
       )
       (project "baseboard"
@@ -1712,9 +1679,6 @@
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "D6") (unit 1)
         )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "D7") (unit 1)
-        )
       )
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
@@ -1763,9 +1727,6 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/136b456a-c7cd-44e7-a02a-d71ffb958ea6"
           (reference "#FLG09") (unit 1)
-        )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/37c84537-bbd3-4c74-89f8-4620d4439e82"
-          (reference "#FLG011") (unit 1)
         )
       )
       (project "baseboard"
