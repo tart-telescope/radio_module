@@ -521,7 +521,7 @@
     ],
     [
       "c4586501-c259-45ec-8c9a-0041b20aeaa8",
-      "Radio Bank 1-8"
+      "Radio Bank1"
     ],
     [
       "c6b862e9-e57f-48de-a0b1-533ec82e1d53",
@@ -529,15 +529,15 @@
     ],
     [
       "4cdac945-bfea-41b8-a713-dd53350b6f49",
-      "Radio Bank 9-16"
+      "Radio Bank2"
     ],
     [
       "c2149c1e-79dc-4242-92ab-460a1ff9cddb",
-      "Radio Bank 17-24"
+      "Radio Bank3"
     ],
     [
       "136b456a-c7cd-44e7-a02a-d71ffb958ea6",
-      "Radio Bank 25-32"
+      "Radio Bank4"
     ]
   ],
   "text_variables": {}
