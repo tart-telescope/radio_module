@@ -543,97 +543,6 @@
         )
       )
     )
-    (symbol "power:GNDPWR" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -5.08 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GNDPWR" (at 0 -3.302 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 -1.27 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 -1.27 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GNDPWR\" , global ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GNDPWR_0_1"
-        (polyline
-          (pts
-            (xy 0 -1.27)
-            (xy 0 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -1.016 -1.27)
-            (xy -1.27 -2.032)
-            (xy -1.27 -2.032)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -0.508 -1.27)
-            (xy -0.762 -2.032)
-            (xy -0.762 -2.032)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 -1.27)
-            (xy -0.254 -2.032)
-            (xy -0.254 -2.032)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.508 -1.27)
-            (xy 0.254 -2.032)
-            (xy 0.254 -2.032)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 -1.27)
-            (xy -1.016 -1.27)
-            (xy -1.016 -1.27)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.016 -1.27)
-            (xy 0.762 -2.032)
-            (xy 0.762 -2.032)
-            (xy 0.762 -2.032)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GNDPWR_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GNDPWR" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "power:PWR_FLAG" (power) (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
       (property "Reference" "#FLG" (at 0 1.905 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -676,6 +585,9 @@
     )
   )
 
+  (junction (at 187.96 69.85) (diameter 0) (color 0 0 0 0)
+    (uuid 0a35ed4e-3789-4417-b5da-f4f1cb076a4a)
+  )
   (junction (at 227.33 77.47) (diameter 0) (color 0 0 0 0)
     (uuid 2e2e9be0-ccf4-458d-9ee0-7b062473e492)
   )
@@ -696,6 +608,9 @@
   )
   (junction (at 162.56 77.47) (diameter 0) (color 0 0 0 0)
     (uuid 7c1a02d1-050c-4421-b0dd-621c37020915)
+  )
+  (junction (at 76.2 68.58) (diameter 0) (color 0 0 0 0)
+    (uuid 99d6c9b1-e1e1-47a1-ae9f-08db76418cc9)
   )
   (junction (at 132.08 77.47) (diameter 0) (color 0 0 0 0)
     (uuid a81163eb-af00-4ca6-a3dc-c0953218a9d3)
@@ -773,9 +688,13 @@
     (stroke (width 0) (type default))
     (uuid 662f4d8f-6dda-4a26-9df2-45d91c02b1cd)
   )
-  (wire (pts (xy 181.61 69.85) (xy 191.77 69.85))
+  (wire (pts (xy 181.61 69.85) (xy 187.96 69.85))
     (stroke (width 0) (type default))
     (uuid 6726c0db-93f9-4d7c-baa1-0be6b0c98028)
+  )
+  (wire (pts (xy 187.96 69.85) (xy 191.77 69.85))
+    (stroke (width 0) (type default))
+    (uuid 696f7041-0ab2-4688-b47b-f73dbc27caa3)
   )
   (wire (pts (xy 227.33 77.47) (xy 241.3 77.47))
     (stroke (width 0) (type default))
@@ -849,9 +768,13 @@
     (stroke (width 0) (type default))
     (uuid eb701336-e2d6-4ae9-bf4e-f558104dd8a1)
   )
-  (wire (pts (xy 78.74 68.58) (xy 73.66 68.58))
+  (wire (pts (xy 78.74 68.58) (xy 76.2 68.58))
     (stroke (width 0) (type default))
     (uuid ee69f2be-080f-4a9d-bec0-0eda4a734afd)
+  )
+  (wire (pts (xy 76.2 68.58) (xy 73.66 68.58))
+    (stroke (width 0) (type default))
+    (uuid fe6c3eb3-e983-4e1e-8e6f-2443730e2c0d)
   )
 
   (hierarchical_label "VCC_3V" (shape input) (at 251.46 68.58 0) (fields_autoplaced)
@@ -865,6 +788,31 @@
   (hierarchical_label "5V" (shape output) (at 191.77 69.85 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid accb61aa-3dd8-4ae8-8b71-82532ac1be7b)
+  )
+
+  (symbol (lib_id "power:PWR_FLAG") (at 187.96 69.85 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 18f2a17b-8e47-4363-84c7-254b46e6b019)
+    (property "Reference" "#FLG02" (at 187.96 67.945 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 187.96 64.77 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 187.96 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 187.96 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c5c59819-c4fc-4623-b7f7-9f895c752e7f))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
+          (reference "#FLG02") (unit 1)
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Regulator_Linear:AMS1117-3.3") (at 227.33 68.58 0) (unit 1)
@@ -915,6 +863,98 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 137.16 81.28 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2b2fe97a-05bc-48fd-9919-f2e1c0323f06)
+    (property "Reference" "#PWR013" (at 137.16 87.63 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 137.16 86.36 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 137.16 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 137.16 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 137.16 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2a8bdc86-bbec-45c7-ac42-5675b62a8def))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR013") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR016") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR071") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
+          (reference "#PWR060") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR020") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 78.74 73.66 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 44859f8d-840e-434a-b201-bb577bf3e2e1)
+    (property "Reference" "#PWR013" (at 78.74 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 78.74 78.74 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 78.74 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 78.74 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 78.74 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c3f56053-56c6-4e75-9777-32c7d8211b86))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR013") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR016") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR071") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
+          (reference "#PWR079") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR020") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C") (at 241.3 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 451fdb9d-8d91-4c2a-9773-cb4f64c9ccda)
@@ -957,74 +997,6 @@
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
           (reference "C4") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:PWR_FLAG") (at 241.3 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 56cfee99-97ad-4f00-80c1-89ce545e7f71)
-    (property "Reference" "#FLG02" (at 241.3 66.675 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "PWR_FLAG" (at 241.3 63.5 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 241.3 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 241.3 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2cfc0562-3086-4b22-a8dc-c35bd1eb4d74))
-    (instances
-      (project "attorv"
-        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
-          (reference "#FLG02") (unit 1)
-        )
-      )
-      (project "batomatic"
-        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
-          (reference "#FLG03") (unit 1)
-        )
-      )
-      (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#FLG02") (unit 1)
-        )
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
-          (reference "#FLG03") (unit 1)
-        )
-      )
-      (project "baseboard"
-        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
-          (reference "#FLG02") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GNDPWR") (at 137.16 81.28 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7011300e-99b3-4e30-a9e2-594a1c74c703)
-    (property "Reference" "#PWR079" (at 137.16 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GNDPWR" (at 137.033 86.36 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 137.16 82.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 137.16 82.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d8f8676e-35a5-4831-8d76-f2f006d2b33d))
-    (instances
-      (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
-          (reference "#PWR079") (unit 1)
         )
       )
     )
@@ -1096,6 +1068,31 @@
       (project "motherboard"
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
           (reference "#PWR057") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:PWR_FLAG") (at 76.2 68.58 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8cc82e51-6961-45c7-b2c9-4ac3ea70bc92)
+    (property "Reference" "#FLG03" (at 76.2 66.675 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 76.2 63.5 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 76.2 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 76.2 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 463251cf-5be6-4246-b929-53a3b16e499a))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
+          (reference "#FLG03") (unit 1)
         )
       )
     )
@@ -1212,31 +1209,6 @@
       (project "motherboard"
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
           (reference "C2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GNDPWR") (at 78.74 73.66 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b910f750-ea26-4143-8bd8-1e79a108e0b2)
-    (property "Reference" "#PWR060" (at 78.74 78.74 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GNDPWR" (at 78.613 78.74 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 78.74 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 78.74 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0b94fc6d-2b8c-4b1f-a5f3-2f921e8418e0))
-    (instances
-      (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/38cf5793-4bf5-477e-9899-62023cbfa679"
-          (reference "#PWR060") (unit 1)
         )
       )
     )

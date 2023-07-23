@@ -266,6 +266,83 @@
         )
       )
     )
+    (symbol "Logic_LevelTranslator:SN74LV1T34DCK" (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at 5.08 6.35 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "SN74LV1T34DCK" (at 5.08 3.81 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 20.32 -6.35 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lv1t34.pdf" (at -10.16 -5.08 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "single buffer level shift" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Single Power Supply, Single Buffer GATE, CMOS Logic, Level Shifter, SOT-353" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "SOT?353*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "SN74LV1T34DCK_0_1"
+        (rectangle (start -5.08 5.08) (end 5.08 -5.08)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+        (polyline
+          (pts
+            (xy -0.762 0)
+            (xy -2.54 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.016 0)
+            (xy 2.54 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "SN74LV1T34DCK_1_1"
+        (polyline
+          (pts
+            (xy -0.762 -0.762)
+            (xy -0.762 0.762)
+            (xy 1.016 0)
+            (xy -0.762 -0.762)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (pin no_connect line (at -5.08 2.54 0) (length 2.54) hide
+          (name "NC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin input line (at -7.62 0 0) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at 0 -7.62 90) (length 2.54)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin output line (at 7.62 0 180) (length 2.54)
+          (name "Y" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at 0 7.62 270) (length 2.54)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Switch:SW_Push" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "SW" (at 1.27 2.54 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -663,13 +740,13 @@
     (uuid 73527a6a-1a99-46ae-b201-40c90d269715)
   )
 
-  (label "SCLK" (at 134.62 74.93 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 0162c537-2f27-4bcc-8f52-1895bf13d380)
-  )
   (label "NRST" (at 104.14 110.49 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 1d5dde97-07bd-447b-ba74-cea39b44898e)
+  )
+  (label "SCLK" (at 134.62 74.93 90) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 2185362c-6734-4689-89cb-6e169084d783)
   )
   (label "SWIO" (at 166.37 110.49 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -679,38 +756,82 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2c4849ed-93b8-4350-b82c-814d2727ad35)
   )
-  (label "SDATA" (at 124.46 74.93 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 74b04390-ee88-40c9-8eec-2de6512c7500)
-  )
-  (label "SLOT1_EN" (at 128.27 153.67 270) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid bad685dd-bdd7-4286-af83-29b6df8bd2f5)
-  )
   (label "PGM" (at 139.7 74.93 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid d4b59b05-fa0a-46b9-8571-944609727659)
+    (uuid 52d73751-496d-486a-b87f-42192c7b40ff)
   )
-  (label "SLOT2_EN" (at 134.62 153.67 270) (fields_autoplaced)
+  (label "CS#" (at 224.79 93.98 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid dfa68c94-4d2f-41d7-9853-1bed0ff5ec9e)
+    (uuid 62de2a71-60d1-4aa2-8148-11f492606c46)
   )
   (label "CS#" (at 129.54 74.93 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid e3f18dce-5c5b-420b-8a31-7a4f505456fb)
+    (uuid 6e839cfb-483e-421a-b42b-2a37907a37b5)
+  )
+  (label "SDATA" (at 124.46 74.93 90) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 75e5588c-bae8-46f2-b7aa-2b3d8f0252cf)
+  )
+  (label "PGM" (at 224.79 39.37 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid a1433f4b-0087-44ea-9097-e4f29e0ded7c)
+  )
+  (label "LED" (at 88.9 165.1 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid caf748f6-5ed0-4261-9642-daa066374ad5)
+  )
+  (label "LED" (at 139.7 151.13 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid eb5f93b6-8003-4c12-9ae3-df18cbe3c63b)
+  )
+  (label "SDATA" (at 224.79 121.92 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid ee51f6dd-0d20-4c16-b201-e9c2e2f6a524)
+  )
+  (label "SCLK" (at 224.79 67.31 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid faad07c8-3166-491f-be65-01f743e11cd3)
   )
 
-  (global_label "HI" (shape input) (at 139.7 151.13 270) (fields_autoplaced)
+  (global_label "SLOT1_EN" (shape input) (at 128.27 153.67 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 0eccbf03-8128-4aa4-9d80-108fa4623fc9)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 139.7 155.9711 90)
+    (uuid 030063c2-36a1-455d-a5c5-a062a1494915)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 128.27 165.8475 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "HI" (shape input) (at 88.9 165.1 0) (fields_autoplaced)
+  (global_label "SCLK" (shape input) (at 240.03 67.31 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 7666e16d-78b2-4b76-b656-6c2e8964306f)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 93.2483 165.0206 0)
+    (uuid 04985540-916d-4549-82f6-0234b1b6c729)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 247.7928 67.31 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "SLOT2_EN" (shape input) (at 134.62 153.67 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 538ba490-c7ee-4225-a30d-4c542b13f5ef)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.62 165.8475 90)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "CS#" (shape input) (at 240.03 93.98 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 6059c9f8-80d5-4298-8b10-5d1ff98db9df)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 246.7647 93.98 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "PGM" (shape input) (at 240.03 39.37 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 8344948e-e594-4d5c-aef2-71e0d4491875)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 247.0066 39.37 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "SDATA" (shape input) (at 240.03 121.92 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid f89dc68d-4f19-4edd-95af-5aafffb8bd09)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 248.6395 121.92 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -756,6 +877,136 @@
     )
   )
 
+  (symbol (lib_id "Device:C") (at 257.81 93.98 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 05afb420-3add-42cf-8d28-50b36b3a84ea)
+    (property "Reference" "C1" (at 261.62 92.7099 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100n" (at 261.62 95.2499 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 258.7752 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 257.81 93.98 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C1525" (at 261.62 92.7099 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 04678b21-aa39-4e7f-845d-92f2d630abac))
+    (pin "2" (uuid 897b9170-66ff-4e17-a9bf-33bd1047b9a9))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "C1") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "C6") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "C9") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "C6") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "C15") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "C1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 257.81 35.56 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 071665fa-08f9-450d-9c83-9508a2171c47)
+    (property "Reference" "#PWR075" (at 257.81 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 257.81 31.75 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 257.81 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid aea32bb7-ecdc-47f6-9eff-237daa713aa5))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR075") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR062") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0112") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 232.41 101.6 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 0faf44b2-d51a-4d50-9c05-373591490f5b)
+    (property "Reference" "#PWR06" (at 232.41 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 234.95 103.505 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 232.41 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 232.41 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 6feb84b1-8944-4d46-bb4f-a77939073abe))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR088") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR077") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0103") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR012") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Connector:TestPoint_Flag") (at 139.7 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 141fa12a-6488-4ecf-aad6-f7f798e70d7c)
@@ -792,6 +1043,55 @@
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
           (reference "TP12") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 257.81 43.18 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2220df73-3a36-40b2-93b5-5e9976813b20)
+    (property "Reference" "#PWR06" (at 257.81 49.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 260.35 45.085 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 257.81 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 257.81 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7ca01efc-580d-4589-a9dc-539d95e8e3f0))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR088") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR077") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0111") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -965,6 +1265,35 @@
     )
   )
 
+  (symbol (lib_id "Logic_LevelTranslator:SN74LV1T34DCK") (at 232.41 67.31 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 2e529fc0-20cc-4f81-915a-2f5c86c62332)
+    (property "Reference" "U11" (at 237.49 58.42 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SN74LV1T34DCK" (at 243.84 60.96 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 252.73 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lv1t34.pdf" (at 222.25 72.39 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f66933ea-49bc-40f5-b1e0-48fa59fa5706))
+    (pin "2" (uuid 07666a9c-b7dc-4eed-b975-4a2a5a3604aa))
+    (pin "3" (uuid 51f15e82-6cd1-4cf6-bf26-15cb549c8962))
+    (pin "4" (uuid 4c15423f-169d-46a5-8443-60d1bcd87b59))
+    (pin "5" (uuid 13939380-67dd-4660-8053-8497cd48cc83))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "U11") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C") (at 147.32 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 35556975-d65d-45a4-8fc5-d041d7b5348f)
@@ -1015,6 +1344,37 @@
     )
   )
 
+  (symbol (lib_id "power:+3.3V") (at 257.81 63.5 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 3e8adb89-b3f5-4fa9-9fc6-c6c5ba9c6c70)
+    (property "Reference" "#PWR075" (at 257.81 67.31 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 257.81 59.69 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 257.81 63.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 63.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a52914ea-1265-46a6-959b-aeb57da3be99))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR075") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR062") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0113") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 99.06 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4d0380f7-743b-47b2-9377-73a463bff893)
@@ -1059,6 +1419,148 @@
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
           (reference "#PWR09") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 232.41 59.69 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 5c6571d6-74a1-48a1-b71a-b6a62fedfade)
+    (property "Reference" "#PWR075" (at 232.41 63.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 232.41 55.88 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 232.41 59.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 232.41 59.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid dec6dff6-a0dd-4a60-b9b3-d8d40b77d4fa))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR075") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR062") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0104") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 232.41 114.3 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 5d484f39-50dc-457a-a84e-2d2b5002824e)
+    (property "Reference" "#PWR075" (at 232.41 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 232.41 110.49 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 232.41 114.3 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 232.41 114.3 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2335100c-64fe-42fc-acbf-6dce2e02bab6))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR075") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR062") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0100") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 232.41 86.36 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 5fcd0663-d3eb-49d3-952c-a47f085e7968)
+    (property "Reference" "#PWR075" (at 232.41 90.17 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 232.41 82.55 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 232.41 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 232.41 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fe858775-7483-44ba-a596-295a6d02f126))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR075") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR062") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0102") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 257.81 71.12 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 66a91ee5-d044-495a-9e39-e3de90e6b001)
+    (property "Reference" "#PWR06" (at 257.81 77.47 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 260.35 73.025 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 257.81 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 257.81 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 841e6720-0ed7-43d7-a92d-0ce163a55021))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR088") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR077") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0110") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -1136,6 +1638,55 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 257.81 125.73 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8c8c3a25-e2bd-48f2-a42b-fc0ff2f3b5bc)
+    (property "Reference" "#PWR06" (at 257.81 132.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 260.35 127.635 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 257.81 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 257.81 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 9d204ea6-14f6-4b75-993c-e06520e194e4))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR088") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR077") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0108") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR012") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:LED") (at 88.9 157.48 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 90c84356-4b54-4206-bde7-96def2143bb6)
@@ -1181,6 +1732,37 @@
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
           (reference "D1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 257.81 90.17 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 910cc206-ec1f-4281-adf6-1f450532aad6)
+    (property "Reference" "#PWR075" (at 257.81 93.98 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 257.81 86.36 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 257.81 90.17 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 90.17 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b2271f29-d78c-4089-89e9-42047c966354))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR075") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR062") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0114") (unit 1)
         )
       )
     )
@@ -1235,6 +1817,37 @@
     )
   )
 
+  (symbol (lib_id "power:+3.3V") (at 257.81 118.11 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid aff3213e-d85f-4aba-8dba-9f2d534e59a5)
+    (property "Reference" "#PWR075" (at 257.81 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 257.81 114.3 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 257.81 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 51d346ed-9856-4c06-9f7a-318f496dcefd))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR075") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR062") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0115") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C") (at 113.03 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b0bc7787-d23e-46f8-868f-97c79ca92a31)
@@ -1275,6 +1888,184 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
           (reference "C6") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "C1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 257.81 67.31 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid b768b33d-8eee-4512-a2b7-cc703956ca36)
+    (property "Reference" "C1" (at 261.62 66.0399 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100n" (at 261.62 68.5799 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 258.7752 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 257.81 67.31 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C1525" (at 261.62 66.0399 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ca6109dd-2623-411a-94fe-02b98a39301c))
+    (pin "2" (uuid 5c7aa8be-15da-4b84-93c2-cf2981631486))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "C1") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "C6") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "C9") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "C6") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "C16") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "C1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 257.81 97.79 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid b8e77e2a-0719-4156-a84c-f8744ad6e37a)
+    (property "Reference" "#PWR06" (at 257.81 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 260.35 99.695 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 257.81 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 257.81 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3201df83-fab6-43ee-8404-2f3d6698c6b1))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR088") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR077") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0109") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR012") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Logic_LevelTranslator:SN74LV1T34DCK") (at 232.41 39.37 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid bccd73e5-2d3b-4df9-b36f-ed45abb3ecf5)
+    (property "Reference" "U12" (at 237.49 30.48 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SN74LV1T34DCK" (at 243.84 33.02 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 252.73 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lv1t34.pdf" (at 222.25 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2362e5c7-ca1e-4b96-96c7-5b9ea133247b))
+    (pin "2" (uuid b6f2fc71-96ec-4d81-abfc-6adb99029844))
+    (pin "3" (uuid 0aad0a8c-bfb3-429b-b471-126271ecfa84))
+    (pin "4" (uuid 832de8f0-5dc9-4563-944b-34c44eba2844))
+    (pin "5" (uuid ba431a22-2be8-49b3-a47d-01da84e5a2f2))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "U12") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 257.81 39.37 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid c1b7b341-5696-409a-91b2-2529a288163b)
+    (property "Reference" "C1" (at 261.62 38.0999 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100n" (at 261.62 40.6399 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 258.7752 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 257.81 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C1525" (at 261.62 38.0999 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 45729f7b-91cd-45ce-839f-c76b8f5f7249))
+    (pin "2" (uuid f52804b7-0bad-432b-b6b2-431686186d33))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "C1") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "C6") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "C9") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "C6") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "C17") (unit 1)
         )
       )
       (project "baseboard"
@@ -1374,6 +2165,104 @@
         )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
           (reference "#PWR077") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR012") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 232.41 46.99 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid cd45b5e2-b154-410c-bb5b-e718a7e9ed1c)
+    (property "Reference" "#PWR06" (at 232.41 53.34 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 234.95 48.895 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 46.99 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 232.41 46.99 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 232.41 46.99 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 66e85bfa-4440-4697-8735-6993ed69d47e))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR088") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR077") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0107") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR012") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 232.41 74.93 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d87649ab-c819-4396-9e1f-96abfa407722)
+    (property "Reference" "#PWR06" (at 232.41 81.28 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 234.95 76.835 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 232.41 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 232.41 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 67476a6f-d65b-44ff-91ed-19a89685e9f6))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR088") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR077") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0105") (unit 1)
         )
       )
       (project "baseboard"
@@ -1511,6 +2400,56 @@
     )
   )
 
+  (symbol (lib_id "Device:C") (at 257.81 121.92 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid f315e9ea-81d2-419e-bb96-38ec5d4ebd6b)
+    (property "Reference" "C1" (at 261.62 120.6499 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100n" (at 261.62 123.1899 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 258.7752 125.73 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 257.81 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C1525" (at 261.62 120.6499 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 29fbce67-547c-44f4-9a8e-cbf2d6a70938))
+    (pin "2" (uuid 2dc68f5f-e165-4c37-ad20-d611d6deb783))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "C1") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "C6") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "C9") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "C6") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "C14") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "C1") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Connector:TestPoint_Flag") (at 134.62 86.36 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f6dc62ba-c1fa-4a12-94f6-3d603ad96ea8)
@@ -1547,6 +2486,144 @@
       (project "baseboard"
         (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
           (reference "TP7") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Logic_LevelTranslator:SN74LV1T34DCK") (at 232.41 93.98 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f79a93bf-2cbd-439e-8542-ab96813a6c92)
+    (property "Reference" "U8" (at 237.49 85.09 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SN74LV1T34DCK" (at 243.84 87.63 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 252.73 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lv1t34.pdf" (at 222.25 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 78515f95-d28a-4622-8365-667227fe67da))
+    (pin "2" (uuid 15de8825-403b-465d-a9a4-f8b051b30305))
+    (pin "3" (uuid d3715b0b-9db8-49b9-9187-f7be16f1f534))
+    (pin "4" (uuid 02832090-b5a7-4ef3-a74d-3b3059bdcc91))
+    (pin "5" (uuid 8498aa79-5e90-454a-95dd-fd7314dd7015))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "U8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Logic_LevelTranslator:SN74LV1T34DCK") (at 232.41 121.92 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid fbed2564-bce0-414f-b1c6-4305be5dcfdc)
+    (property "Reference" "U13" (at 237.49 113.03 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SN74LV1T34DCK" (at 243.84 115.57 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5" (at 252.73 128.27 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lv1t34.pdf" (at 222.25 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3ba4bed0-f8e8-4670-9814-12d86fcabb18))
+    (pin "2" (uuid 47c15081-0dac-45c2-9545-3a0950e79b7d))
+    (pin "3" (uuid cd76f541-3203-4a05-80cb-e5a5646e0504))
+    (pin "4" (uuid d8ec4dc4-5cbe-4cdf-92b6-5c823fad81b8))
+    (pin "5" (uuid b45c9580-919b-43eb-8f80-bb4956b7b1ac))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "U13") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 232.41 31.75 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid fefbc9dd-869e-4f43-b324-7152164c60d0)
+    (property "Reference" "#PWR075" (at 232.41 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 232.41 27.94 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 232.41 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 232.41 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 114cb79c-9075-4635-abee-851980d2e97e))
+    (instances
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR075") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR062") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0106") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 232.41 129.54 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid fff41e4c-bee6-4ab7-b0d3-47f87b3ec20d)
+    (property "Reference" "#PWR06" (at 232.41 135.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 234.95 131.445 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 232.41 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "JLCPCB" "C2296" (at 232.41 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid bae7423e-7451-44ac-a989-dc7ef8d14bc8))
+    (instances
+      (project "attorv"
+        (path "/6109b252-c3cf-4e79-aa0f-a13bf7f36f08"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "batomatic"
+        (path "/6a22bd48-0d2f-47d1-9720-f349a7ed8e38"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "motherboard"
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
+          (reference "#PWR088") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
+          (reference "#PWR077") (unit 1)
+        )
+        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c6b862e9-e57f-48de-a0b1-533ec82e1d53"
+          (reference "#PWR0101") (unit 1)
+        )
+      )
+      (project "baseboard"
+        (path "/90e67b08-3f87-4aae-a0f4-e75745c296ee"
+          (reference "#PWR012") (unit 1)
         )
       )
     )
