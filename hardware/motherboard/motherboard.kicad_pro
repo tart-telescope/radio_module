@@ -461,7 +461,11 @@
       },
       {
         "netclass": "GND",
-        "pattern": ""
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "+24V"
       }
     ]
   },
