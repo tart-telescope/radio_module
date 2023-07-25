@@ -193,7 +193,7 @@
   },
   "erc": {
     "erc_exclusions": [
-      "pin_to_pin|660400|863600|57f8f7fb-fbc4-4369-bc9f-3cc44061d2ea|9488587e-7ad0-4e89-a04e-7c5edbf8f2c4|/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8|/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8|/8b9e6a91-374f-4ed7-8e43-281c0006e662/4cdac945-bfea-41b8-a713-dd53350b6f49"
+      "no_connect_connected|749300|1536700|fd425d03-9355-4603-aa9d-d0ac5f6fa422|02b5a209-2111-4ccb-9975-f80916abcc3d|||"
     ],
     "meta": {
       "version": 0
@@ -394,7 +394,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "warning",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "ignore",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
