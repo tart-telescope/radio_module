@@ -1521,7 +1521,7 @@
     (property "Datasheet" "~" (at 101.6 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C3204125" (at 101.6 64.77 90)
+    (property "LCSC" "C268204" (at 101.6 64.77 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4417c1a6-6034-4547-93da-198db4795097))
