@@ -8644,7 +8644,7 @@
   )
 
   (symbol (lib_id "Mechanical:Housing") (at 269.875 236.855 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid dbaece9a-fb79-4ae9-a65f-2fce5aa07fbc)
     (property "Reference" "N1" (at 274.32 235.9025 0)
       (effects (font (size 1.27 1.27)) (justify left))
