@@ -2346,7 +2346,7 @@
     (property "Value" "Reset" (at 161.29 161.2899 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "motherboard:TS-1187A-B-A-B" (at 162.56 160.02 0)
+    (property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A" (at 162.56 160.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 162.56 160.02 0)
