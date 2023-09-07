@@ -56,7 +56,7 @@ def getConf2():
     reg.setBits(14, 13, "00");   # Reserved
     reg.setBits(12, 11, "00");   # AGC Mode INDEPENDENT I/Q
     reg.setBits(10, 9, "01");   # FORMAT '01': Sign Magnitude, 
-    reg.setBits(8, 6, "010");   # 1 bits ADC ('000': 1-bit, '010': 2-bits, '100': 3-bits)
+    reg.setBits(8, 6, "000");   # 1 bits ADC ('000': 1-bit, '010': 2-bits, '100': 3-bits)
     reg.setBits(5, 4, "00");   # DRVCFG '00': CMOS logic, '01': Differential?, '1x': Analog
     reg.setBit(3, "1");   # Reserved
     reg.setBit(2, "1");   # Reserved

@@ -60,7 +60,7 @@ int main(void)
 		Delay_Ms(100);
 		// Enable the MAX2769 (Normal Mode)
 		enableRadio();
-	#if 0 /* Not enable serial configuration */
+	#if 1 /* Not enable serial configuration */
 		// Serial Configuration States PGM -> Logic Low
 		Delay_Ms(2000);
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
@@ -68,7 +68,8 @@ int main(void)
 
 		Delay_Ms(500);
   		GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_SET);
-		setupRadioStream(TART_CS_PORT, TART_CS_PIN);
+		// setupRadioStream(TART_CS_PORT, TART_CS_PIN);
+		setupRadio(TART_CS_PORT, TART_CS_PIN);
 	#endif
 
 	while (1)

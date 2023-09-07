@@ -70,7 +70,7 @@ void setupRadioStream(GPIO_TypeDef *cs_port, pin_t cs_pin)
 
 void setupRadio(GPIO_TypeDef *cs_port, pin_t cs_pin)
 {
-  max2769set(cs_port, cs_pin, 0b0000, 0xa293973);  // max2769setCONF1
+  max2769set(cs_port, cs_pin, 0b0000, 0xa293973);  // CONF1
   max2769set(cs_port, cs_pin, 0b0001, 0x855020c);  // CONF2
   max2769set(cs_port, cs_pin, 0b0010, 0xeaff1dc);  // CONF3
   max2769set(cs_port, cs_pin, 0b0011, 0x9ec0008);  // PLL
