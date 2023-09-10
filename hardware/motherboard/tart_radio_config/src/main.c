@@ -34,8 +34,36 @@ void HardFault_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 void Delay_Init(void);
 void Delay_Ms(uint32_t n);
 
+void pulse_led(uint32_t period, float high_percent) {
+	if (high_percent < 0.0) high_percent = 0.0;
+	if (high_percent > 1.0) high_percent = 1.0;
+	uint32_t high_us = (period * high_percent);
+	if (high_us > period) high_us = period;
+	uint32_t low_us = period - high_us;
+	GPIO_WriteBit(LED_GPIO_PORT, LED_GPIO_PIN, Bit_SET);
+	Delay_Us(low_us);
+	GPIO_WriteBit(LED_GPIO_PORT, LED_GPIO_PIN, Bit_RESET);
+	Delay_Us(high_us);
+}
 
+float qsin(float x) {
+	// http://datagenetics.com/blog/july12019/index.html
+	static const float pi = 3.14159265;
+	static const float pis = pi*pi;
+	static const float p2 = 2.0 * pi;
 
+	// Wrap x to -pi..pi	
+	while (x < -pi) x += p2;
+	while (x > pi) x -= p2;
+    if (x < 0) {
+        return -qsin(-x);
+	}
+	float px = (pi - x);
+	float xpx = x*px;
+	float y = (16*xpx)/(5*pis - 4*xpx);
+
+	return y;
+}
 
 int main(void)
 {
@@ -47,7 +75,7 @@ int main(void)
 
 	// SHDN the MAX2769 (Shutdown Mode)
 	shutdownRadio();
-	Delay_Ms(500);
+	Delay_Ms(1500);
 
 	// GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
 	/* FIRST go into the preconfigured state */
@@ -74,19 +102,11 @@ int main(void)
 
 	while (1)
 	{
-  		for (int j=0; j<255;j++) {
-			for (int i=0; i<128;i++) {
-				GPIO_WriteBit(LED_GPIO_PORT, LED_GPIO_PIN, Bit_RESET);
-				Delay_Us(i*20);
-				GPIO_WriteBit(LED_GPIO_PORT, LED_GPIO_PIN, Bit_SET);
-				Delay_Ms(10);
-			}
-			for (int i=128; i>0;i--) {
-				GPIO_WriteBit(LED_GPIO_PORT, LED_GPIO_PIN, Bit_RESET);
-				Delay_Us(i*20);
-				GPIO_WriteBit(LED_GPIO_PORT, LED_GPIO_PIN, Bit_SET);
-				Delay_Ms(10);
-			}
+  		for (int j=-128; j<128;j++) {
+			float theta = ((float)(j) / 128.0) * 3.14159265;
+			float y = (qsin(theta)+1.0)/2;
+
+			pulse_led(10000, y);
 		}
 	}
 }
