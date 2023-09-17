@@ -14,8 +14,13 @@ def qsin(x):
     y = (16*xpx)/(5*pis - 4*xpx);
     return y
 
-xarray = np.linspace(-pi, pi, 100)
-yarray = [qsin(_x) for _x in xarray]
 
-plt.plot(xarray,yarray)
+jarray = np.linspace(-128, 128, 256)
+theta = [((float)(j) / 128.0) * 3.14159265 for j in jarray]
+sarray = [qsin(pi/2 - _x) for _x in theta]
+
+yarray = (np.array(sarray)+1.0)/2;
+
+plt.plot(theta,yarray)
+# plt.plot(theta,sarray)
 plt.show()

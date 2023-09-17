@@ -65,6 +65,16 @@ float qsin(float x) {
 	return y;
 }
 
+float cos(float x) {
+	float x2 = x*x;
+	float x4 = x2*x2;
+	return 0.0372093273724708*x4 - 0.496392330120076*x2 + 0.999579515069198;
+}
+float cos2(float x) {
+	float c = cos(x);
+	return c*c;
+}
+
 int main(void)
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
@@ -102,11 +112,16 @@ int main(void)
 
 	while (1)
 	{
-  		for (int j=-128; j<128;j++) {
-			float theta = ((float)(j) / 128.0) * 3.14159265;
-			float y = (qsin(theta)+1.0)/2;
+		float scale = 3.14159265/256.0;
+
+  		for (int j=-128; j<128; j++) {
+			float theta = (float)(j)* scale;
+			float y = cos2(theta);
 
 			pulse_led(10000, y);
+		}
+		for  (int j=0; j<128; j++) {
+			pulse_led(10000, 0);
 		}
 	}
 }
