@@ -3720,7 +3720,7 @@
     (effects (font (size 3 3) (thickness 1.6) bold) (justify left bottom))
     (uuid e6402502-b886-43a2-a35d-3d4ebc661dc7)
   )
-  (text "3/IOR42B/M6\n" (at 107.95 82.55 0)
+  (text "3/IOR42B/P8\n" (at 107.95 82.55 0)
     (effects (font (size 1 1)) (justify left bottom))
     (uuid e64c6bab-e099-4526-b61c-44384711b608)
   )
