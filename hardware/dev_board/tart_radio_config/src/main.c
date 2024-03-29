@@ -48,7 +48,7 @@ int main(void)
 	// SHDN the MAX2769 (Shutdown Mode)
 	shutdownRadio();
 	Delay_Ms(500);
-	GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
+	// GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
 	/* FIRST go into the preconfigured state */
 		// Preconfigured States PGM -> Logic Hi
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_SET);
@@ -59,9 +59,9 @@ int main(void)
 		Delay_Ms(100);
 		// Enable the MAX2769 (Normal Mode)
 		enableRadio();
-	#if 1 /* Not enble serial configuration */
+	#if 1 /* Not enable serial configuration */
 		// Serial Configuration States PGM -> Logic Low
-		Delay_Ms(1000);
+		Delay_Ms(2000);
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
 		// Enable the MAX2769 (Normal Mode)
 

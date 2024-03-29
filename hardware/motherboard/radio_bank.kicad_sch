@@ -975,9 +975,6 @@
     (pin "B9" (uuid 7dbfb995-0df4-4062-a614-13cd18a53771))
     (instances
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
-          (reference "J1") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
           (reference "J1") (unit 1)
         )
@@ -1362,9 +1359,6 @@
     (pin "B9" (uuid b63579ed-88d8-4574-8d13-0c4b21f51ab0))
     (instances
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
-          (reference "J2") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
           (reference "J2") (unit 1)
         )

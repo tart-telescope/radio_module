@@ -5380,9 +5380,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP19") (unit 1)
         )
@@ -5508,9 +5505,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP14") (unit 1)
         )
@@ -5653,9 +5647,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP23") (unit 1)
         )
@@ -5778,9 +5769,6 @@
     (pin "4" (uuid b1ecb91c-5fca-4be3-87b2-5c77d18e7d37))
     (instances
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "X2") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "X2") (unit 1)
         )
@@ -6102,9 +6090,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP27") (unit 1)
         )
@@ -6195,9 +6180,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP24") (unit 1)
         )
@@ -6293,9 +6275,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP12") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP12") (unit 1)
         )
@@ -6331,9 +6310,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP20") (unit 1)
         )
@@ -6528,9 +6504,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "C11") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "C22") (unit 1)
         )
@@ -6575,9 +6548,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "C11") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "C4") (unit 1)
         )
@@ -6646,9 +6616,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR087") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR0117") (unit 1)
         )
@@ -6804,9 +6771,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP17") (unit 1)
         )
@@ -6875,9 +6839,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR087") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR087") (unit 1)
         )
@@ -6916,9 +6877,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR091") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR056") (unit 1)
         )
@@ -7024,7 +6982,7 @@
   (symbol (lib_id "power:+3.3V") (at 175.26 227.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 64b8a4fc-375e-4b06-aed6-1d5f0ee0e24c)
-    (property "Reference" "#PWR097" (at 175.26 231.14 0)
+    (property "Reference" "#PWR058" (at 175.26 231.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 175.26 223.52 0)
@@ -7039,9 +6997,6 @@
     (pin "1" (uuid b5a64e7a-eaa3-4258-9607-a25541cc3dd8))
     (instances
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR097") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR058") (unit 1)
         )
@@ -7105,9 +7060,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR098") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR095") (unit 1)
         )
@@ -7278,9 +7230,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP26") (unit 1)
         )
@@ -7319,9 +7268,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR091") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR061") (unit 1)
         )
@@ -7420,9 +7366,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR091") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR059") (unit 1)
         )
@@ -7548,9 +7491,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP15") (unit 1)
         )
@@ -7676,9 +7616,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP25") (unit 1)
         )
@@ -8009,9 +7946,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP18") (unit 1)
         )
@@ -8315,7 +8249,7 @@
   (symbol (lib_id "power:+3.3V") (at 359.41 228.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bc0ceff6-2fa3-4595-9c76-b6bc25fc1001)
-    (property "Reference" "#PWR097" (at 359.41 232.41 0)
+    (property "Reference" "#PWR070" (at 359.41 232.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 359.41 224.79 0)
@@ -8330,9 +8264,6 @@
     (pin "1" (uuid e91e0444-8181-4082-b772-8efa380f6e92))
     (instances
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR097") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR070") (unit 1)
         )
@@ -8388,9 +8319,6 @@
     (pin "1" (uuid cc60798d-072c-4e7f-8ef5-412c192374c5))
     (instances
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR086") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR086") (unit 1)
         )
@@ -8466,9 +8394,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "U10") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "U9") (unit 1)
         )
@@ -8535,9 +8460,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP13") (unit 1)
         )
@@ -8583,7 +8505,7 @@
   (symbol (lib_id "power:+3.3V") (at 218.44 219.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d8d54a68-1e5e-4473-a884-21081f9661df)
-    (property "Reference" "#PWR097" (at 218.44 223.52 0)
+    (property "Reference" "#PWR094" (at 218.44 223.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 218.44 215.9 0)
@@ -8598,9 +8520,6 @@
     (pin "1" (uuid 6ed6dbfd-cc5a-4cc5-a3a3-632d7ca1985b))
     (instances
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "#PWR097") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "#PWR094") (unit 1)
         )
@@ -8720,9 +8639,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP7") (unit 1)
         )
@@ -8783,9 +8699,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP16") (unit 1)
         )
@@ -8821,9 +8734,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP5") (unit 1)
         )
@@ -8898,9 +8808,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "C11") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "C5") (unit 1)
         )
@@ -9022,9 +8929,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP22") (unit 1)
         )
@@ -9090,9 +8994,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP11") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP11") (unit 1)
         )
@@ -9128,9 +9029,6 @@
         )
       )
       (project "motherboard"
-        (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662/c4586501-c259-45ec-8c9a-0041b20aeaa8"
-          (reference "TP13") (unit 1)
-        )
         (path "/8b9e6a91-374f-4ed7-8e43-281c0006e662"
           (reference "TP21") (unit 1)
         )
