@@ -14,6 +14,8 @@ typedef uint16_t pin_t;
 // SDATA PD6
 // CS# PD5
 // PGM PD3
+// SHDN# PD2
+// RADIO_RECONFIG PC4
 
 #define TART_SLOT_ENABLE_PORT GPIOD
 #define TART_SLOT_ENABLE_PIN GPIO_Pin_2

@@ -65,13 +65,13 @@ float qsin(float x) {
 	return y;
 }
 
-float cos(float x) {
+float qcos(float x) {
 	float x2 = x*x;
 	float x4 = x2*x2;
 	return 0.0372093273724708*x4 - 0.496392330120076*x2 + 0.999579515069198;
 }
-float cos2(float x) {
-	float c = cos(x);
+float qcos2(float x) {
+	float c = qcos(x);
 	return c*c;
 }
 
@@ -95,10 +95,10 @@ int main(void)
 		GPIO_WriteBit(TART_CS_PORT, TART_CS_PIN, Bit_RESET);
 		GPIO_WriteBit(TART_SDATA_PORT, TART_SDATA_PIN, Bit_SET);
 		GPIO_WriteBit(TART_SCLK_PORT, TART_SCLK_PIN, Bit_RESET);
-		Delay_Ms(100);
+		Delay_Ms(2000);
 		// Enable the MAX2769 (Normal Mode)
 		enableRadio();
-	#if 1 /* Not enable serial configuration */
+	#if 0 /* Not enable serial configuration */
 		// Serial Configuration States PGM -> Logic Low
 		Delay_Ms(2000);
 		GPIO_WriteBit(TART_PGM_PORT, TART_PGM_PIN, Bit_RESET);
@@ -116,7 +116,7 @@ int main(void)
 
   		for (int j=-128; j<128; j++) {
 			float theta = (float)(j)* scale;
-			float y = cos2(theta);
+			float y = qcos2(theta);
 
 			pulse_led(10000, y);
 		}

@@ -77,9 +77,9 @@ void setupRadio(GPIO_TypeDef *cs_port, pin_t cs_pin)
 }
 
 void shutdownRadio(void) {
-  GPIO_WriteBit(TART_SLOT_ENABLE_PORT, TART_SLOT_ENABLE_PIN, Bit_RESET);
+  GPIO_WriteBit(TART_SLOT_ENABLE_PORT, TART_SLOT_ENABLE_PIN, Bit_RESET);  // SHDN# is active low
 }
 
 void enableRadio(void) {
-  GPIO_WriteBit(TART_SLOT_ENABLE_PORT, TART_SLOT_ENABLE_PIN, Bit_SET);
+  GPIO_WriteBit(TART_SLOT_ENABLE_PORT, TART_SLOT_ENABLE_PIN, Bit_SET); // SHDN# is active low
 }
