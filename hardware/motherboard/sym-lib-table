@@ -5,4 +5,5 @@
   (lib (name "Raspberry_Pi_2_or_3")(type "KiCad")(uri "${KIPRJMOD}/Raspberry-Pi-4-library-for-kicad/Raspberry_Pi_2_or_3.kicad_sym")(options "")(descr ""))
   (lib (name "motherboard")(type "KiCad")(uri "${KIPRJMOD}/motherboard.kicad_sym")(options "")(descr ""))
   (lib (name "detector_usb")(type "KiCad")(uri "/home/tim/git/detector/hardware/modules/interface/usb_interface/detector_usb.kicad_sym")(options "")(descr ""))
+  (lib (name "ripple")(type "KiCad")(uri "${RIPPLE}/ripple.kicad_sym")(options "")(descr ""))
 )
