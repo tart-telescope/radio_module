@@ -6,10 +6,10 @@
 	(paper "A4")
 	(title_block
 		(title "Papilio Pro Interposer")
-		(date "2024-02-29")
+		(date "2024-04-15")
 		(rev "1.0")
-		(company "University of Otago, Gadget Factory LLC")
-		(comment 1 "©Phill Brown 2024, Gadget Factory 2009-2012")
+		(company "Tim Molteno. Electronic Research Foundation")
+		(comment 1 "©Tim Molteno 2024, ")
 	)
 	(lib_symbols
 		(symbol "DDR3_204P_SMD_2"
