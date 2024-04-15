@@ -1788,7 +1788,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 142.24) (xy 149.86 142.24)
+			(xy 143.51 142.24) (xy 147.32 142.24)
 		)
 		(stroke
 			(width 0)
@@ -1855,16 +1855,6 @@
 			(type default)
 		)
 		(uuid "1beea02a-12d0-428e-8be4-7ae004a2025b")
-	)
-	(wire
-		(pts
-			(xy 149.86 143.51) (xy 149.86 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1eb12bcd-3272-4979-b75b-b8053d179a44")
 	)
 	(wire
 		(pts
@@ -2298,7 +2288,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 125.73) (xy 142.24 125.73)
+			(xy 137.16 125.73) (xy 146.05 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2675,7 +2665,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Flag")
-		(at 142.24 125.73 0)
+		(at 146.05 125.73 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2684,7 +2674,7 @@
 		(dnp no)
 		(uuid "01b106b5-3ab5-4996-ac18-f686496f8cca")
 		(property "Reference" "TP6"
-			(at 143.764 125.476 0)
+			(at 147.574 125.476 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2693,7 +2683,7 @@
 			)
 		)
 		(property "Value" "CLK_3"
-			(at 143.002 127.508 0)
+			(at 146.812 127.508 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2702,7 +2692,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro-Minature"
-			(at 147.32 125.73 0)
+			(at 151.13 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2711,7 +2701,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 125.73 0)
+			(at 151.13 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2720,7 +2710,7 @@
 			)
 		)
 		(property "Description" "test point (alternative flag-style design)"
-			(at 142.24 125.73 0)
+			(at 146.05 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4720,7 +4710,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LMK1C1104"
+		(property "Value" "CDCV304PWR"
 			(at 102.362 121.158 0)
 			(effects
 				(font
@@ -4738,7 +4728,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flmk1c1104"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1809192315_Texas-Instruments-CDCV304PWR_C105237.pdf"
 			(at 96.52 125.73 0)
 			(effects
 				(font
@@ -4756,7 +4746,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2859546"
+		(property "LCSC" "C105237"
 			(at 102.5241 119.38 0)
 			(effects
 				(font
@@ -7060,7 +7050,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Flag")
-		(at 149.86 143.51 0)
+		(at 147.32 142.24 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7069,7 +7059,7 @@
 		(dnp no)
 		(uuid "e20a19ef-1f3a-4e6a-88db-d70a144f2461")
 		(property "Reference" "TP8"
-			(at 151.13 148.59 0)
+			(at 148.59 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7078,7 +7068,7 @@
 			)
 		)
 		(property "Value" "CLK_4"
-			(at 150.876 145.288 0)
+			(at 148.336 144.018 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7087,7 +7077,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro-Minature"
-			(at 154.94 143.51 0)
+			(at 152.4 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7096,7 +7086,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 154.94 143.51 0)
+			(at 152.4 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7105,7 +7095,7 @@
 			)
 		)
 		(property "Description" "test point (alternative flag-style design)"
-			(at 149.86 143.51 0)
+			(at 147.32 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
