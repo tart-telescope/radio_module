@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "papilio_sodimm_interposer")(type "KiCad")(uri "/home/tim/tart-telescope/radio_module/hardware/papilio_sodimm_interposer/papilio_sodimm_interposer.pretty")(options "")(descr ""))
+  (lib (name "TART_Library")(type "KiCad")(uri "/home/tim/tart-telescope/radio_module/hardware/TART_Library.pretty")(options "")(descr ""))
+)

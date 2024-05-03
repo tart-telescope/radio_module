@@ -4,8 +4,9 @@
 	(generator_version "8.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at -30.14 18.51 0)
+		(at -31.6 20 0)
 		(layer "F.SilkS")
+		(hide yes)
 		(uuid "812b1d92-ccc7-41e8-8f05-401a733de838")
 		(effects
 			(font
@@ -15,7 +16,7 @@
 		)
 	)
 	(property "Value" "Val**"
-		(at -62.23 43.18 0)
+		(at -32 27.7 0)
 		(layer "F.Fab")
 		(uuid "4831193a-40bb-422e-93fd-b02aa0dc78fb")
 		(effects
@@ -26,7 +27,7 @@
 		)
 	)
 	(property "Footprint" "PAPILIO_PRO"
-		(at -62.23 43.18 0)
+		(at -30.9 23.6 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
@@ -960,46 +961,6 @@
 		)
 		(layer "F.SilkS")
 		(uuid "b4aa8178-d256-49ab-921f-541325863c60")
-	)
-	(fp_line
-		(start -28.575 14.605)
-		(end -27.94 15.24)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "abf8338c-7e44-4194-b0bc-7e85d1a6d154")
-	)
-	(fp_line
-		(start -27.94 15.24)
-		(end -28.575 15.875)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "21b37d71-be54-495f-becc-e0c32b0adf6d")
-	)
-	(fp_line
-		(start -27.94 15.24)
-		(end -27.305 14.605)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "28009ae6-338f-4dd0-b641-5664fab0a8d1")
-	)
-	(fp_line
-		(start -27.94 15.24)
-		(end -27.305 15.875)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "99174822-f8a0-475c-b841-53fde06879de")
 	)
 	(fp_line
 		(start -22.86 -5.715)

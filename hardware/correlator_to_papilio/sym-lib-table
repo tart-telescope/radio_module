@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "TART_Library")(type "KiCad")(uri "/home/tim/tart-telescope/radio_module/hardware/TART_Library.kicad_sym")(options "")(descr ""))
+)
