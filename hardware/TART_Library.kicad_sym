@@ -7,7 +7,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "J"
-			(at -1.524 0.762 0)
+			(at -33.782 -1.524 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15,15 +15,15 @@
 			)
 		)
 		(property "Value" "Papilio Pro"
-			(at 1.27 2.54 0)
+			(at -33.02 1.778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Papilio_Pro:PAPILIO_PRO"
-			(at 1.27 2.54 0)
+		(property "Footprint" "TART_Library:PAPILIO_PRO"
+			(at -3.81 2.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -81,6 +81,17 @@
 				)
 			)
 			(rectangle
+				(start -3.81 -21.59)
+				(end 1.27 -22.86)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
 				(start 8.89 -21.59)
 				(end 1.27 21.59)
 				(stroke
@@ -108,7 +119,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 19.05 0)
+				(at 11.43 19.05 180)
 				(length 2.54)
 				(name "A0"
 					(effects
@@ -126,7 +137,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 16.51 0)
+				(at 11.43 16.51 180)
 				(length 2.54)
 				(name "A1"
 					(effects
@@ -144,7 +155,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -6.35 0)
+				(at 11.43 -6.35 180)
 				(length 2.54)
 				(name "A10"
 					(effects
@@ -162,7 +173,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -8.89 0)
+				(at 11.43 -8.89 180)
 				(length 2.54)
 				(name "A11"
 					(effects
@@ -180,7 +191,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -11.43 0)
+				(at 11.43 -11.43 180)
 				(length 2.54)
 				(name "A12"
 					(effects
@@ -198,7 +209,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -13.97 0)
+				(at 11.43 -13.97 180)
 				(length 2.54)
 				(name "A13"
 					(effects
@@ -216,7 +227,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -16.51 0)
+				(at 11.43 -16.51 180)
 				(length 2.54)
 				(name "A14"
 					(effects
@@ -234,7 +245,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -19.05 0)
+				(at 11.43 -19.05 180)
 				(length 2.54)
 				(name "A15"
 					(effects
@@ -252,7 +263,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 13.97 0)
+				(at 11.43 13.97 180)
 				(length 2.54)
 				(name "A2"
 					(effects
@@ -270,7 +281,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 11.43 0)
+				(at 11.43 11.43 180)
 				(length 2.54)
 				(name "A3"
 					(effects
@@ -288,7 +299,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 8.89 0)
+				(at 11.43 8.89 180)
 				(length 2.54)
 				(name "A4"
 					(effects
@@ -306,7 +317,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 6.35 0)
+				(at 11.43 6.35 180)
 				(length 2.54)
 				(name "A5"
 					(effects
@@ -324,7 +335,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 3.81 0)
+				(at 11.43 3.81 180)
 				(length 2.54)
 				(name "A6"
 					(effects
@@ -342,7 +353,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 1.27 0)
+				(at 11.43 1.27 180)
 				(length 2.54)
 				(name "A7"
 					(effects
@@ -360,7 +371,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -1.27 0)
+				(at 11.43 -1.27 180)
 				(length 2.54)
 				(name "A8"
 					(effects
@@ -378,7 +389,7 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -3.81 0)
+				(at 11.43 -3.81 180)
 				(length 2.54)
 				(name "A9"
 					(effects
@@ -396,7 +407,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -19.05 180)
+				(at -13.97 -19.05 0)
 				(length 2.54)
 				(name "B0"
 					(effects
@@ -414,7 +425,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -16.51 180)
+				(at -13.97 -16.51 0)
 				(length 2.54)
 				(name "B1"
 					(effects
@@ -432,7 +443,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 6.35 180)
+				(at -13.97 6.35 0)
 				(length 2.54)
 				(name "B10"
 					(effects
@@ -450,7 +461,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 8.89 180)
+				(at -13.97 8.89 0)
 				(length 2.54)
 				(name "B11"
 					(effects
@@ -468,7 +479,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 11.43 180)
+				(at -13.97 11.43 0)
 				(length 2.54)
 				(name "B12"
 					(effects
@@ -486,7 +497,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 13.97 180)
+				(at -13.97 13.97 0)
 				(length 2.54)
 				(name "B13"
 					(effects
@@ -504,7 +515,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 16.51 180)
+				(at -13.97 16.51 0)
 				(length 2.54)
 				(name "B14"
 					(effects
@@ -522,7 +533,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 19.05 180)
+				(at -13.97 19.05 0)
 				(length 2.54)
 				(name "B15"
 					(effects
@@ -540,7 +551,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -13.97 180)
+				(at -13.97 -13.97 0)
 				(length 2.54)
 				(name "B2"
 					(effects
@@ -558,7 +569,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -11.43 180)
+				(at -13.97 -11.43 0)
 				(length 2.54)
 				(name "B3"
 					(effects
@@ -576,7 +587,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -8.89 180)
+				(at -13.97 -8.89 0)
 				(length 2.54)
 				(name "B4"
 					(effects
@@ -594,7 +605,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -6.35 180)
+				(at -13.97 -6.35 0)
 				(length 2.54)
 				(name "B5"
 					(effects
@@ -612,7 +623,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -3.81 180)
+				(at -13.97 -3.81 0)
 				(length 2.54)
 				(name "B6"
 					(effects
@@ -630,7 +641,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -1.27 180)
+				(at -13.97 -1.27 0)
 				(length 2.54)
 				(name "B7"
 					(effects
@@ -648,7 +659,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 1.27 180)
+				(at -13.97 1.27 0)
 				(length 2.54)
 				(name "B8"
 					(effects
@@ -666,7 +677,7 @@
 				)
 			)
 			(pin input line
-				(at 11.43 3.81 180)
+				(at -13.97 3.81 0)
 				(length 2.54)
 				(name "B9"
 					(effects

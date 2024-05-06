@@ -11766,7 +11766,7 @@
 			)
 		)
 	)
-	(global_label "CLK16"
+	(global_label "CLK_16"
 		(shape input)
 		(at 87.63 118.11 0)
 		(fields_autoplaced yes)
@@ -11778,7 +11778,7 @@
 		)
 		(uuid "8a0e32b8-a85d-433a-b6d4-30850e974dd7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.6023 118.11 0)
+			(at 97.5699 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
