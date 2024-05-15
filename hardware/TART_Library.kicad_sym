@@ -81,17 +81,6 @@
 				)
 			)
 			(rectangle
-				(start -3.81 -21.59)
-				(end 1.27 -22.86)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(rectangle
 				(start 8.89 -21.59)
 				(end 1.27 21.59)
 				(stroke
@@ -119,9 +108,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 19.05 180)
+				(at 11.43 -19.05 180)
 				(length 2.54)
-				(name "A0"
+				(name "P48"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -137,9 +126,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 16.51 180)
+				(at 11.43 -16.51 180)
 				(length 2.54)
-				(name "A1"
+				(name "P51"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -155,9 +144,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -6.35 180)
+				(at 11.43 6.35 180)
 				(length 2.54)
-				(name "A10"
+				(name "P83"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -173,9 +162,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -8.89 180)
+				(at 11.43 8.89 180)
 				(length 2.54)
-				(name "A11"
+				(name "P85"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -191,9 +180,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -11.43 180)
+				(at 11.43 11.43 180)
 				(length 2.54)
-				(name "A12"
+				(name "P88"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -209,9 +198,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -13.97 180)
+				(at 11.43 13.97 180)
 				(length 2.54)
-				(name "A13"
+				(name "P93"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -227,9 +216,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -16.51 180)
+				(at 11.43 16.51 180)
 				(length 2.54)
-				(name "A14"
+				(name "P98"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -245,9 +234,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -19.05 180)
+				(at 11.43 19.05 180)
 				(length 2.54)
-				(name "A15"
+				(name "P100"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -263,9 +252,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 13.97 180)
+				(at 11.43 -13.97 180)
 				(length 2.54)
-				(name "A2"
+				(name "P56"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -281,9 +270,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 11.43 180)
+				(at 11.43 -11.43 180)
 				(length 2.54)
-				(name "A3"
+				(name "P58"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -299,9 +288,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 8.89 180)
+				(at 11.43 -8.89 180)
 				(length 2.54)
-				(name "A4"
+				(name "P61"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -317,9 +306,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 6.35 180)
+				(at 11.43 -6.35 180)
 				(length 2.54)
-				(name "A5"
+				(name "P66"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -335,9 +324,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 3.81 180)
+				(at 11.43 -3.81 180)
 				(length 2.54)
-				(name "A6"
+				(name "P67"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -353,9 +342,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 1.27 180)
+				(at 11.43 -1.27 180)
 				(length 2.54)
-				(name "A7"
+				(name "P75"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -371,9 +360,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -1.27 180)
+				(at 11.43 1.27 180)
 				(length 2.54)
-				(name "A8"
+				(name "P79"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -389,9 +378,9 @@
 				)
 			)
 			(pin input line
-				(at 11.43 -3.81 180)
+				(at 11.43 3.81 180)
 				(length 2.54)
-				(name "A9"
+				(name "P81"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -407,9 +396,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -19.05 0)
+				(at -13.97 19.05 0)
 				(length 2.54)
-				(name "B0"
+				(name "P99"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -425,9 +414,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -16.51 0)
+				(at -13.97 16.51 0)
 				(length 2.54)
-				(name "B1"
+				(name "P97"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -443,9 +432,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 6.35 0)
+				(at -13.97 -6.35 0)
 				(length 2.54)
-				(name "B10"
+				(name "P62"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -461,9 +450,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 8.89 0)
+				(at -13.97 -8.89 0)
 				(length 2.54)
-				(name "B11"
+				(name "P59"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -479,9 +468,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 11.43 0)
+				(at -13.97 -11.43 0)
 				(length 2.54)
-				(name "B12"
+				(name "P57"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -497,9 +486,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 13.97 0)
+				(at -13.97 -13.97 0)
 				(length 2.54)
-				(name "B13"
+				(name "P55"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -515,9 +504,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 16.51 0)
+				(at -13.97 -16.51 0)
 				(length 2.54)
-				(name "B14"
+				(name "P50"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -533,9 +522,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 19.05 0)
+				(at -13.97 -19.05 0)
 				(length 2.54)
-				(name "B15"
+				(name "P47"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -551,9 +540,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -13.97 0)
+				(at -13.97 13.97 0)
 				(length 2.54)
-				(name "B2"
+				(name "P92"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -569,9 +558,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -11.43 0)
+				(at -13.97 11.43 0)
 				(length 2.54)
-				(name "B3"
+				(name "P87"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -587,9 +576,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -8.89 0)
+				(at -13.97 8.89 0)
 				(length 2.54)
-				(name "B4"
+				(name "P84"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -605,9 +594,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -6.35 0)
+				(at -13.97 6.35 0)
 				(length 2.54)
-				(name "B5"
+				(name "P82"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -623,9 +612,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -3.81 0)
+				(at -13.97 3.81 0)
 				(length 2.54)
-				(name "B6"
+				(name "P80"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -641,9 +630,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 -1.27 0)
+				(at -13.97 1.27 0)
 				(length 2.54)
-				(name "B7"
+				(name "P78"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -659,9 +648,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 1.27 0)
+				(at -13.97 -1.27 0)
 				(length 2.54)
-				(name "B8"
+				(name "P74"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -677,9 +666,9 @@
 				)
 			)
 			(pin input line
-				(at -13.97 3.81 0)
+				(at -13.97 -3.81 0)
 				(length 2.54)
-				(name "B9"
+				(name "P95"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -697,7 +686,7 @@
 			(pin input line
 				(at -59.69 19.05 0)
 				(length 2.54)
-				(name "C0"
+				(name "P114"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -715,7 +704,7 @@
 			(pin input line
 				(at -59.69 16.51 0)
 				(length 2.54)
-				(name "C1"
+				(name "P115"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -733,7 +722,7 @@
 			(pin input line
 				(at -59.69 -6.35 0)
 				(length 2.54)
-				(name "C10"
+				(name "P126"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -751,7 +740,7 @@
 			(pin input line
 				(at -59.69 -8.89 0)
 				(length 2.54)
-				(name "C11"
+				(name "P127"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -769,7 +758,7 @@
 			(pin input line
 				(at -59.69 -11.43 0)
 				(length 2.54)
-				(name "C12"
+				(name "P131"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -787,7 +776,7 @@
 			(pin input line
 				(at -59.69 -13.97 0)
 				(length 2.54)
-				(name "C13"
+				(name "P132"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -805,7 +794,7 @@
 			(pin input line
 				(at -59.69 -16.51 0)
 				(length 2.54)
-				(name "C14"
+				(name "P133"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -823,7 +812,7 @@
 			(pin input line
 				(at -59.69 -19.05 0)
 				(length 2.54)
-				(name "C15"
+				(name "P134"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -841,7 +830,7 @@
 			(pin input line
 				(at -59.69 13.97 0)
 				(length 2.54)
-				(name "C2"
+				(name "P116"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -859,7 +848,7 @@
 			(pin input line
 				(at -59.69 11.43 0)
 				(length 2.54)
-				(name "C3"
+				(name "P117"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -877,7 +866,7 @@
 			(pin input line
 				(at -59.69 8.89 0)
 				(length 2.54)
-				(name "C4"
+				(name "P118"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -895,7 +884,7 @@
 			(pin input line
 				(at -59.69 6.35 0)
 				(length 2.54)
-				(name "C5"
+				(name "P119"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -913,7 +902,7 @@
 			(pin input line
 				(at -59.69 3.81 0)
 				(length 2.54)
-				(name "C6"
+				(name "P120"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -931,7 +920,7 @@
 			(pin input line
 				(at -59.69 1.27 0)
 				(length 2.54)
-				(name "C7"
+				(name "P121"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -949,7 +938,7 @@
 			(pin input line
 				(at -59.69 -1.27 0)
 				(length 2.54)
-				(name "C8"
+				(name "P123"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -967,7 +956,7 @@
 			(pin input line
 				(at -59.69 -3.81 0)
 				(length 2.54)
-				(name "C9"
+				(name "P124"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4289,9 +4278,9 @@
 				)
 			)
 			(pin input line
-				(at -48.26 29.21 0)
+				(at -48.26 31.75 0)
 				(length 2.54)
-				(name "R07_Q1"
+				(name "R07_I1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4325,9 +4314,9 @@
 				)
 			)
 			(pin input line
-				(at -48.26 31.75 0)
+				(at -48.26 29.21 0)
 				(length 2.54)
-				(name "R07_I1"
+				(name "R07_Q1"
 					(effects
 						(font
 							(size 1.27 1.27)
