@@ -6543,7 +6543,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "CDCV304PW"
 			(at 83.4741 147.32 0)
 			(effects
 				(font
@@ -6579,7 +6579,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2859546"
+		(property "LCSC" "C105237"
 			(at 83.4741 148.59 0)
 			(effects
 				(font
