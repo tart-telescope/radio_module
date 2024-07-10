@@ -2428,6 +2428,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C5199798"
+			(at 116.84 84.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "aa8a9224-efda-4095-870c-84301c35b4e9")
 		)
@@ -2507,7 +2516,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C125977"
 			(at 261.62 92.7099 0)
 			(effects
 				(font
@@ -2763,6 +2772,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C5199798"
+			(at 137.16 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "18bb6255-982b-40c4-ba73-df4d7f91163d")
 		)
@@ -2842,7 +2860,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C125977"
 			(at 261.62 147.3199 0)
 			(effects
 				(font
@@ -3219,7 +3237,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C5299908"
+		(property "LCSC" "C225721"
 			(at 170.18 106.4512 0)
 			(effects
 				(font
@@ -3372,7 +3390,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C131337"
+		(property "LCSC" "C404113"
 			(at 177.8 110.49 0)
 			(effects
 				(font
@@ -3554,7 +3572,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C15849"
 			(at 151.13 158.7499 0)
 			(effects
 				(font
@@ -4187,6 +4205,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C5199798"
+			(at 128.27 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d6839d4f-9c0f-4e62-b97b-c1ecf9a1f892")
 		)
@@ -4519,7 +4546,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72043"
+		(property "LCSC" "C8678"
 			(at 88.9 157.48 90)
 			(effects
 				(font
@@ -4842,7 +4869,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C125977"
 			(at 116.84 153.6699 0)
 			(effects
 				(font
@@ -5005,7 +5032,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C125977"
 			(at 261.62 66.0399 0)
 			(effects
 				(font
@@ -5347,7 +5374,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C125977"
 			(at 261.62 38.0999 0)
 			(effects
 				(font
@@ -5444,7 +5471,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C318884"
 			(at 161.29 158.7499 0)
 			(effects
 				(font
@@ -5888,6 +5915,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C5199798"
+			(at 142.24 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b0f5bb3f-c808-4a14-93d7-25a25bf7f8c8")
 		)
@@ -5948,6 +5984,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 88.9 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25879"
+			(at 91.44 145.415 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6136,7 +6181,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C125977"
 			(at 261.62 120.6499 0)
 			(effects
 				(font
@@ -6225,6 +6270,15 @@
 		)
 		(property "Description" "test point (alternative flag-style design)"
 			(at 134.62 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C5199798"
+			(at 132.08 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)

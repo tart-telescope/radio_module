@@ -2810,7 +2810,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C6186"
+		(property "LCSC" "C5299908"
 			(at 227.33 68.58 0)
 			(effects
 				(font
@@ -3224,7 +3224,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C59461"
+		(property "LCSC" "C1525"
 			(at 245.11 72.3899 0)
 			(effects
 				(font
@@ -3413,7 +3413,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C8678"
 			(at 250.19 87.63 90)
 			(effects
 				(font
@@ -3666,7 +3666,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C72038"
+		(property "LCSC" "C8678"
 			(at 194.31 88.9 90)
 			(effects
 				(font
@@ -3762,7 +3762,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C3031443"
+		(property "LCSC" "C404113"
 			(at 53.34 69.85 0)
 			(effects
 				(font
@@ -4146,6 +4146,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C34465"
+			(at 146.05 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d56289f2-388d-4cb0-bdd5-f5e84d727408")
 		)
@@ -4304,6 +4313,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25879"
+			(at 252.73 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "174f607c-7b6d-4e36-8700-fa25d3621c71")
 		)
@@ -4385,6 +4403,15 @@
 		)
 		(property "Description" "Schottky diode"
 			(at 162.56 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C8678"
+			(at 165.1 72.7075 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4935,6 +4962,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 194.31 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25879"
+			(at 196.215 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
