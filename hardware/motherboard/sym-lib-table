@@ -6,4 +6,5 @@
   (lib (name "ripple")(type "KiCad")(uri "${RIPPLE}/ripple.kicad_sym")(options "")(descr ""))
   (lib (name "TART_Library")(type "KiCad")(uri "${TART_HARDWARE_DIR}/TART_Library.kicad_sym")(options "")(descr ""))
   (lib (name "raspberry_pi_2_3")(type "KiCad")(uri "${TART_HARDWARE_DIR}/motherboard/Raspberry-Pi-4-library-for-kicad/raspberry_pi_2_3.kicad_sym")(options "")(descr ""))
+  (lib (name "swd-connect")(type "KiCad")(uri "/home/tim/github/swd-connect/swd-connect.kicad_sym")(options "")(descr ""))
 )

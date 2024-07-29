@@ -3,4 +3,5 @@
   (lib (name "baseboard_library")(type "KiCad")(uri "${TART_HARDWARE_DIR}/dev_board/baseboard_library.pretty")(options "")(descr ""))
   (lib (name "motherboard")(type "KiCad")(uri "${KIPRJMOD}/motherboard.pretty")(options "")(descr ""))
   (lib (name "TART_Library")(type "KiCad")(uri "${TART_HARDWARE_DIR}/TART_Library.pretty")(options "")(descr ""))
+  (lib (name "swd-connect")(type "KiCad")(uri "/home/tim/github/swd-connect/swd-connect.pretty")(options "")(descr ""))
 )
