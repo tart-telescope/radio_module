@@ -2632,13 +2632,13 @@
 		(at 132.715 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "12ecb2a1-ca1a-48b4-8bb0-8faddcd18d11")
 		(property "Reference" "H6"
-			(at 135.255 115.57 0)
+			(at 135.89 115.5699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2646,8 +2646,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M3"
-			(at 135.255 118.11 0)
+		(property "Value" "M4"
+			(at 135.89 118.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2655,7 +2655,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 132.715 116.84 0)
 			(effects
 				(font
@@ -2953,13 +2953,13 @@
 		(at 118.11 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3b760aa7-e865-43f1-90ca-a76fa75b095e")
 		(property "Reference" "H3"
-			(at 120.65 115.57 0)
+			(at 120.65 115.5699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2967,8 +2967,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M3"
-			(at 120.65 118.11 0)
+		(property "Value" "M4"
+			(at 120.65 118.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2976,7 +2976,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 118.11 116.84 0)
 			(effects
 				(font
@@ -3017,13 +3017,13 @@
 		(at 147.955 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "3f4bf452-3339-4133-b9bb-b0cfffd5d5d2")
 		(property "Reference" "H7"
-			(at 150.495 106.68 0)
+			(at 151.13 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3031,8 +3031,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M3"
-			(at 150.495 109.22 0)
+		(property "Value" "M4"
+			(at 151.13 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3040,7 +3040,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 147.955 107.95 0)
 			(effects
 				(font
@@ -3224,7 +3224,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C125977"
+		(property "LCSC" "C59461"
 			(at 245.11 72.3899 0)
 			(effects
 				(font
@@ -3460,13 +3460,13 @@
 		(at 132.715 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "683f5c5b-e01b-4e01-8453-14250bb12594")
 		(property "Reference" "H5"
-			(at 135.255 106.68 0)
+			(at 135.89 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3474,8 +3474,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M3"
-			(at 135.255 109.22 0)
+		(property "Value" "M4"
+			(at 135.89 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3483,7 +3483,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 132.715 107.95 0)
 			(effects
 				(font
@@ -3735,7 +3735,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "motherboard:DB126V-5.0-2P-GN-P"
+		(property "Footprint" "Connector_Phoenix_MSTB:PhoenixContact_MSTBVA_2,5_2-G-5,08_1x02_P5.08mm_Vertical"
 			(at 53.34 69.85 0)
 			(effects
 				(font
@@ -3753,7 +3753,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "XY2500V-D-5.08-2P"
 			(at 53.34 69.85 0)
 			(effects
 				(font
@@ -3762,7 +3762,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C404113"
+		(property "LCSC" "C505788"
 			(at 53.34 69.85 0)
 			(effects
 				(font
@@ -3901,13 +3901,13 @@
 		(at 102.87 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "844ac518-2b8e-4848-a1e4-7fa473bcf35f")
 		(property "Reference" "H1"
-			(at 105.41 106.68 0)
+			(at 105.41 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3915,8 +3915,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M3"
-			(at 105.41 109.22 0)
+		(property "Value" "M4"
+			(at 105.41 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3924,7 +3924,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 102.87 107.95 0)
 			(effects
 				(font
@@ -4600,13 +4600,13 @@
 		(at 147.955 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "be84347e-1f48-46d7-981a-560d39713a1f")
 		(property "Reference" "H8"
-			(at 150.495 115.57 0)
+			(at 151.13 115.5699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4614,8 +4614,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M3"
-			(at 150.495 118.11 0)
+		(property "Value" "M4"
+			(at 151.13 118.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4623,7 +4623,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 147.955 116.84 0)
 			(effects
 				(font
@@ -5016,9 +5016,9 @@
 		(at 102.87 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d746ec3a-e54d-4868-b9c7-7e8b139388d0")
 		(property "Reference" "H2"
@@ -5039,7 +5039,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 102.87 116.84 0)
 			(effects
 				(font
@@ -5212,13 +5212,13 @@
 		(at 118.11 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ff45a4a6-3157-4bf5-bee7-27f5b716f390")
 		(property "Reference" "H4"
-			(at 120.65 106.68 0)
+			(at 120.65 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5226,8 +5226,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "M3"
-			(at 120.65 109.22 0)
+		(property "Value" "M4"
+			(at 120.65 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5235,7 +5235,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
 			(at 118.11 107.95 0)
 			(effects
 				(font
